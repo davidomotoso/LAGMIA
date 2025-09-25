@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import banner from "../../public/banner.png";
 import Catergories from "./Catergories";
+import Hero from "./Hero";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
           className="w-full object-cover bg-primary rounded-sm pl-5"
         />
       </section>
+      <Hero />
     </>
   );
 };

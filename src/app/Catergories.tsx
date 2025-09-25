@@ -1,5 +1,5 @@
-import logo from "../../public/logo.jpg";
 import Link from "next/link";
+import ad from "../../public/unitrade-lagos-ad.jpg";
 import {
   FaBook,
   FaDesktop,
@@ -14,8 +14,8 @@ import Image from "next/image";
 
 const Catergories = () => {
   return (
-    <aside className="w-3/12 space-y-5 overflow-hidden shadow-md">
-      <ul className="p-4 grid items-start gap-y-6 text-neutral-dark bg-white rounded-xl text-sm">
+    <aside className="w-3/12 space-y-5 overflow-hidden">
+      <ul className="p-4 grid items-start gap-y-5 text-neutral-dark bg-white rounded-md shadow-md">
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
@@ -81,12 +81,7 @@ const Catergories = () => {
           </Link>
         </li>
       </ul>
-      <div className="p-4 bg-secondary rounded-xl">
-        <Image src={logo} alt="ad" className="invert" />
-        <h3 className="text-2xl font-medium text-primary text-center mt-6 animate-bounce">
-          Buy & Sell Now!
-        </h3>
-      </div>
+      <Image src={ad} alt="ad" className="h-3/11 rounded-md" />
     </aside>
   );
 };
