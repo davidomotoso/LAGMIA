@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import banner from "../../public/banner.png";
 import Catergories from "./Catergories";
@@ -7,7 +6,6 @@ import Hero from "./Hero";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <section className="flex gap-6 h-[33rem]">
         <Catergories />
         <Image

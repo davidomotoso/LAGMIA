@@ -6,11 +6,14 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header className="bg-white px-6 py-2 rounded-xl my-3 flex justify-between items-center">
-      <Image
-        src={logo}
-        alt="logo for unitrade lagos"
-        width={150}
-      />
+      <Link href="/">
+        <Image
+          src={logo}
+          alt="logo for unitrade lagos"
+          width={150}
+          priority={true}
+        />
+      </Link>
       <input
         type="search"
         className="w-80 border rounded-sm border-gray-400 py-1 px-4"
