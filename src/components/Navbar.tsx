@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../public/logo.jpg";
 import { FaUser } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 const Navbar = () => {
   return (
@@ -25,6 +25,7 @@ const Navbar = () => {
             <li className="flex items-center gap-x-2 hover:text-secondary duration-200">
               <FaUser />
               Account
+              <FaChevronDown />
             </li>
           </Link>
           <Link href="">
