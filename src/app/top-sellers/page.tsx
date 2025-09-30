@@ -1,4 +1,4 @@
-import { introProducts } from "@/components/Export";
+import { introProducts } from "@/components/Exports";
 import Link from "next/link";
 import Image from "next/image";
 const TopSellers = () => {

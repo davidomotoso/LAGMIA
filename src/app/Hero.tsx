@@ -1,4 +1,4 @@
-import { introProducts, categories } from "@/components/Export";
+import { introProducts, categories } from "@/components/Exports";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa6";
