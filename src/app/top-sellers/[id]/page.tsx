@@ -5,7 +5,7 @@ const Page = ({ params }: { params: { id: number } }) => {
   return (
     <section className="flex items-start justify-between">
       <Product param={params} />
-      <DeliveryReturns />
+      <DeliveryReturns params={params}/>
     </section>
   );
 };

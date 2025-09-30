@@ -1,4 +1,4 @@
-import { introProducts } from "@/components/Export";
+import { introProducts } from "@/components/Exports";
 import Image from "next/image";
 import { FaCartPlus, FaStar } from "react-icons/fa6";
 import ProductDetails from "@/components/ProductDetails";
@@ -18,10 +18,14 @@ const Product = async ({ param }: { param: { id: number } }) => {
         <div className="w-4/7 grid place-items-start gap-y-3 text-neutral-dark">
           <div className="w-full space-y-3 pb-3 border-b border-b-gray-200">
             <h2 className="text-3xl font-semibold">{product.name}</h2>
-            <p>
-              <strong>Seller: </strong>{" "}
-              <span className="text-primary">{product.seller}</span>
-            </p>
+            {product.specifications
+              .filter((spec) => spec.label === "Brand")
+              .map((spec, index) => (
+                <p key={index}>
+                  <strong>Brand: </strong>
+                  <span className="text-primary">{spec.value}</span>
+                </p>
+              ))}
           </div>
           <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
             <h3 className="text-2xl font-bold">{product.price}</h3>

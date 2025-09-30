@@ -19,7 +19,6 @@ export const introProducts = [
     id: 0,
     name: "Cerave Foaming Facial Cleanser",
     price: "₦8,500",
-    seller: "Cerave",
     image: cerveFoamingFacialCleanser,
     desc: [
       "A gentle foaming cleanser highly recommended by dermatologists for its skin-friendly properties.",
@@ -64,7 +63,6 @@ export const introProducts = [
       "Padded collar and tongue for enhanced support",
     ],
     specifications: [
-      { label: "Brand", value: "Jide Ogunsanya" },
       { label: "Weight", value: "0.3" },
       { label: "Product Type", value: "Books" },
     ],
@@ -73,7 +71,7 @@ export const introProducts = [
     id: 2,
     name: "New Balance",
     price: "₦25,000",
-    seller: "New Balance",
+    seller: "JI Footwears",
     image: newBalance,
     desc: [
       "Stylish and comfortable sneakers meticulously crafted for everyday wear, blending fashion with functionality in a single design.",
@@ -102,7 +100,7 @@ export const introProducts = [
     id: 3,
     name: "Samsung Galaxy S23 Ultra",
     price: "₦1,200,000",
-    seller: "Samsung",
+    seller: "JoGad Ventures",
     image: samsungGalaxyS23Ultra,
     desc: [
       "A flagship smartphone that redefines excellence with its stunning Dynamic AMOLED 2X display, delivering vibrant colors and a silky-smooth 120Hz refresh rate for an immersive viewing experience.",
@@ -131,7 +129,7 @@ export const introProducts = [
     id: 4,
     name: "Microwave",
     price: "₦45,000",
-    seller: "LG",
+    seller: "Home Essentials",
     image: microwave,
     desc: [
       "A compact and highly efficient microwave oven designed to streamline meal preparation with convenience and speed at its core.",
@@ -160,7 +158,7 @@ export const introProducts = [
     id: 5,
     name: "Cream Shirt",
     price: "₦7,500",
-    seller: "Zara",
+    seller: "Fashion Hub",
     image: creamShirt,
     desc: [
       "A versatile cream-colored shirt crafted from high-quality, breathable fabric that combines comfort with timeless elegance.",
@@ -217,5 +215,80 @@ export const categories = [
     id: 6,
     name: "Home Appliances",
     image: homeAppliances,
+  },
+];
+
+export const sellers = [
+  {
+    name: "Facial Care",
+    id: 0,
+    score: 90,
+    followers: 120,
+    sellPerformance: [
+      { shipingSpeed: 95 },
+      { qualityScore: 88 },
+      { customerRating: 72 },
+    ],
+    sellerInfo: [{ duration: "2 years", sales: 500 }],
+  },
+  {
+    name: "Jide Ogunsanya",
+    id: 1,
+    score: 85,
+    followers: 200,
+    sellPerformance: [
+      { shipingSpeed: 80 },
+      { qualityScore: 90 },
+      { customerRating: 65 },
+    ],
+    sellerInfo: [{ duration: "1 year", sales: 300 }],
+  },
+  {
+    name: "JI Footwears",
+    id: 2,
+    score: 88,
+    followers: 250,
+    sellPerformance: [
+      { shipingSpeed: 85 },
+      { qualityScore: 87 },
+      { customerRating: 80 },
+    ],
+    sellerInfo: [{ duration: "3 years", sales: 400 }],
+  },
+  {
+    name: "JoGad Ventures",
+    id: 3,
+    score: 92,
+    followers: 150,
+    sellPerformance: [
+      { shipingSpeed: 90 },
+      { qualityScore: 95 },
+      { customerRating: 61 },
+    ],
+    sellerInfo: [{ duration: "4 years", sales: 600 }],
+  },
+  {
+    name: "Home Essentials",
+    id: 4,
+    score: 87,
+    followers: 100,
+    sellPerformance: [
+      { shipingSpeed: 82 },
+      { qualityScore: 88 },
+      { customerRating: 68 },
+    ],
+    sellerInfo: [{ duration: "2 years", sales: 350 }],
+  },
+  {
+    name: "Fashion Hub",
+    id: 5,
+    score: 89,
+    followers: 110,
+    sellPerformance: [
+      { shipingSpeed: 88 },
+      { qualityScore: 61 },
+      { customerRating: 50 },
+    ],
+    sellerInfo: [{ duration: "3 years", sales: 450 }],
   },
 ];
