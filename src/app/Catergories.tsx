@@ -14,8 +14,8 @@ import Image from "next/image";
 
 const Catergories = () => {
   return (
-    <aside className="w-3/12 space-y-5 overflow-hidden">
-      <ul className="p-4 grid items-start gap-y-5 text-neutral-dark bg-white rounded-md shadow-md">
+    <aside className="w-3/12 flex flex-col justify-between overflow-hidden">
+      <ul className="p-4 grid items-start gap-y-5 text-neutral-dark bg-white rounded-sm shadow-md">
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
@@ -81,7 +81,7 @@ const Catergories = () => {
           </Link>
         </li>
       </ul>
-      <Image src={ad} alt="ad" className="h-3/11 rounded-md" />
+      <Image src={ad} alt="ad" className="h-5/18 rounded-sm" />
     </aside>
   );
 };

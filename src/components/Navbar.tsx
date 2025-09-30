@@ -5,7 +5,7 @@ import { FaCartShopping, FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 const Navbar = () => {
   return (
-    <header className="bg-white px-6 py-2 rounded-xl my-3 flex justify-between items-center">
+    <header className="bg-white px-6 py-2 rounded-md my-3 flex justify-between items-center">
       <Link href="/">
         <Image
           src={logo}

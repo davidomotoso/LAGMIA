@@ -1,52 +1,58 @@
 import { introProducts } from "@/components/Export";
 import Image from "next/image";
 import { FaCartPlus, FaStar } from "react-icons/fa6";
+import ProductDetails from "@/components/ProductDetails";
+import Specifications from "./Specifications";
 
-const Product = ({ param }: { param: { id: number } }) => {
-  const product = introProducts[param.id];
+const Product = async ({ param }: { param: { id: number } }) => {
+  const { id } = await param;
+  const product = introProducts[id];
   return (
-    <section className="bg-white p-4 rounded-md flex items-start justify-between w-8/11">
-      <Image
-        className="rounded-md object-cover w-4/10 h-80"
-        src={product.image}
-        alt={product.name}
-      />
-      <div className="w-4/7 grid place-items-start gap-y-3 text-neutral-dark">
-        <div className="w-full space-y-3 pb-3 border-b border-b-gray-200">
-          <h2 className="text-3xl font-semibold">{product.name}</h2>
-          <p>
-            <span className="font-medium">Seller: </span>Wgadet
-          </p>
-        </div>
-        <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
-          <h3 className="text-2xl font-bold">{product.price}</h3>
-          <p className="text-gray-600 text-sm">In stock</p>
-          <p className="text-sm">
-            + shipping calculated at checkout
-          </p>
-          <div className="flex items-center gap-x-2">
-            <div className="flex gap-x-1 items-center">
-              {[...Array(5)].map((_, index) => (
-                <FaStar
-                  key={index}
-                  className="text-gray-400/70 hover:text-secondary"
-                />
-              ))}
-            </div>
-            <p className="text-primary">(32 verified rating)</p>
+    <section className="w-8/11">
+      <section className="bg-white p-4 rounded-sm flex items-start justify-between">
+        <Image
+          className="rounded-md object-cover w-4/10 h-80"
+          src={product.image}
+          alt={product.name}
+        />
+        <div className="w-4/7 grid place-items-start gap-y-3 text-neutral-dark">
+          <div className="w-full space-y-3 pb-3 border-b border-b-gray-200">
+            <h2 className="text-3xl font-semibold">{product.name}</h2>
+            <p>
+              <strong>Seller: </strong>{" "}
+              <span className="text-primary">{product.seller}</span>
+            </p>
           </div>
-          <button
-            type="submit"
-            className="bg-primary text-white p-3 rounded-md cursor-pointer flex items-center w-full mt-4 font-medium hover:bg-primary/90 duration-200"
-          >
-            <FaCartPlus className="text-xl" />
-            <span className="mx-auto">Add to cart</span>
-          </button>
+          <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
+            <h3 className="text-2xl font-bold">{product.price}</h3>
+            <p className="text-gray-600 text-sm">In stock</p>
+            <p className="text-sm">+ shipping calculated at checkout</p>
+            <div className="flex items-center gap-x-2">
+              <div className="flex gap-x-1 items-center">
+                {[...Array(5)].map((_, index) => (
+                  <FaStar
+                    key={index}
+                    className="text-gray-400/70 hover:text-secondary"
+                  />
+                ))}
+              </div>
+              <p className="text-primary">(32 verified rating)</p>
+            </div>
+            <button
+              type="submit"
+              className="bg-primary text-white p-3 rounded-md cursor-pointer flex items-center w-full mt-4 font-medium hover:bg-primary/90 duration-200"
+            >
+              <FaCartPlus className="text-xl" />
+              <span className="mx-auto">Add to cart</span>
+            </button>
+          </div>
+          <p className="text-xs text-primary cursor-pointer hover:underline">
+            Report incorrect product information
+          </p>
         </div>
-        <p className="text-xs text-primary cursor-pointer hover:underline">
-          Report incorrect product information
-        </p>
-      </div>
+      </section>
+      <ProductDetails product={product} />
+      <Specifications product={product} />
     </section>
   );
 };
