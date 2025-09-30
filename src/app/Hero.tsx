@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section>
       <section className="my-6 shadow-md">
-        <div className="bg-secondary px-5 py-3 rounded-t-md flex items-center justify-between">
+        <div className="bg-secondary px-5 py-3 rounded-t-sm flex items-center justify-between">
           <h3 className="text-neutral-dark text-xl font-semibold">
             Top Sellers
           </h3>
@@ -18,7 +18,7 @@ const Hero = () => {
             See all <FaChevronRight className="inline" />
           </Link>
         </div>
-        <div className="grid grid-cols-6 bg-white gap-4 p-5 pb-3 shadow-md rounded-b-md">
+        <div className="grid grid-cols-6 bg-white gap-4 p-5 pb-3 shadow-md rounded-b-sm">
           {introProducts.map((product) => (
             <Link
               href={`/top-sellers/${product.id}`}
@@ -42,12 +42,12 @@ const Hero = () => {
         </div>
       </section>
       <section className="shadow-md">
-        <div className="bg-secondary px-5 py-3 rounded-t-md">
+        <div className="bg-secondary px-5 py-3 rounded-t-sm">
           <h3 className="text-neutral-dark text-xl text-center font-semibold">
             Featured Products
           </h3>
         </div>
-        <div className="grid grid-cols-6 bg-white gap-4 p-5 pb-3 shadow-md rounded-b-md">
+        <div className="grid grid-cols-6 bg-white gap-4 p-5 pb-3 shadow-md rounded-b-sm">
           {categories.map((category) => (
             <Link
               href=""

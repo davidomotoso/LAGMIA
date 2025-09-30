@@ -4,7 +4,7 @@ import { BsArrowCounterclockwise, BsHouse, BsTruck } from "react-icons/bs";
 const DeliveryReturns = () => {
   const { getDeliveryDate: getDeliveryDate } = useDeliveryDate();
   return (
-    <aside className="w-3/12 text-sm text-neutral-dark bg-white rounded-md">
+    <aside className="w-3/12 text-sm text-neutral-dark bg-white rounded-sm sticky top-2">
       <h5 className="font-medium p-2 border-b border-gray-200">
         DELIVERY & RETURNS
       </h5>
