@@ -28,7 +28,7 @@ const Navbar = () => {
               <FaChevronDown />
             </li>
           </Link>
-          <Link href="">
+          <Link href="/cart">
             <li className="flex items-center gap-x-2 hover:text-secondary duration-200">
               <FaCartShopping />
               Cart

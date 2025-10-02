@@ -1,7 +1,9 @@
+
 import { BsBagCheckFill } from "react-icons/bs";
 import { FaCheck, FaCheckDouble, FaX } from "react-icons/fa6";
 
 const useFunctions = () => {
+
   const getDeliveryDate = (daysToAdd: number): string => {
     const currentDate = new Date();
     currentDate.setDate(currentDate.getDate() + daysToAdd);
@@ -27,6 +29,7 @@ const useFunctions = () => {
       return { icon: <FaX />, grade: "Poor", color: "bg-red-500" };
     }
   };
+
 
   return { getDeliveryDate, getAppraisal };
 };

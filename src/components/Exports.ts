@@ -20,6 +20,7 @@ export const introProducts = [
     name: "Cerave Foaming Facial Cleanser",
     price: "₦8,500",
     image: cerveFoamingFacialCleanser,
+    category: "Health & Beauty",
     desc: [
       "A gentle foaming cleanser highly recommended by dermatologists for its skin-friendly properties.",
       "It effectively removes dirt, oil, and makeup while preserving the skin's natural barrier, ensuring a balanced complexion even after repeated use. Formulated with a powerful blend of ceramides, hyaluronic acid, and niacinamide, it cleanses deeply without over-drying, making it an excellent choice for normal to oily skin types seeking a non-irritating solution.",
@@ -45,8 +46,8 @@ export const introProducts = [
     id: 1,
     name: "Empire of Vision",
     price: "₦10,000",
-    seller: "Jide Ogunsanya",
     image: empireOfVision,
+    category: "Books",
     desc: [
       "A captivating novel that delves deeply into the timeless themes of ambition, power, and destiny, crafted with exceptional narrative skill.",
       "It follows the inspiring journey of a determined young protagonist who sets out to reshape the world around them, weaving a rich tapestry of character development that brings each figure to life with authenticity and depth. The story blends thought-provoking social commentary with intricate plot twists, offering readers a multi-layered experience that challenges their perspectives.",
@@ -71,8 +72,8 @@ export const introProducts = [
     id: 2,
     name: "New Balance",
     price: "₦25,000",
-    seller: "JI Footwears",
     image: newBalance,
+    category: "Fashion",
     desc: [
       "Stylish and comfortable sneakers meticulously crafted for everyday wear, blending fashion with functionality in a single design.",
       "Featuring a durable rubber outsole that ensures excellent traction on various surfaces and Fresh Foam cushioning technology for superior shock absorption, these sneakers provide all-day comfort and support, making them a top choice for active individuals. The ergonomic design supports natural foot movement, reducing fatigue during extended wear.",
@@ -100,8 +101,8 @@ export const introProducts = [
     id: 3,
     name: "Samsung Galaxy S23 Ultra",
     price: "₦1,200,000",
-    seller: "JoGad Ventures",
     image: samsungGalaxyS23Ultra,
+    category: "Phones & Tablets",
     desc: [
       "A flagship smartphone that redefines excellence with its stunning Dynamic AMOLED 2X display, delivering vibrant colors and a silky-smooth 120Hz refresh rate for an immersive viewing experience.",
       "Powered by the latest Snapdragon processor, it excels at gaming, multitasking, and professional tasks, offering lightning-fast performance that caters to tech enthusiasts and productivity-driven users alike. The advanced cooling system ensures sustained efficiency even during intensive use.",
@@ -129,8 +130,8 @@ export const introProducts = [
     id: 4,
     name: "Microwave",
     price: "₦45,000",
-    seller: "Home Essentials",
     image: microwave,
+    category: "Home Appliances",
     desc: [
       "A compact and highly efficient microwave oven designed to streamline meal preparation with convenience and speed at its core.",
       "Equipped with multiple power levels and an array of pre-programmed settings, it simplifies a wide range of tasks including reheating leftovers, defrosting frozen items, and cooking diverse dishes with precision and ease. The intuitive controls cater to all skill levels.",
@@ -158,8 +159,8 @@ export const introProducts = [
     id: 5,
     name: "Cream Shirt",
     price: "₦7,500",
-    seller: "Fashion Hub",
     image: creamShirt,
+    category: "Fashion",
     desc: [
       "A versatile cream-colored shirt crafted from high-quality, breathable fabric that combines comfort with timeless elegance.",
       "Its tailored fit and minimalist design make it a standout piece suitable for both casual outings and formal occasions, offering a polished look that transitions seamlessly from day to night. The subtle stitching details enhance its sophisticated appeal.",
@@ -292,3 +293,4 @@ export const sellers = [
     sellerInfo: [{ duration: "3 years", sales: 450 }],
   },
 ];
+
