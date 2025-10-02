@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section>
+    <>
       <section className="my-6 shadow-md">
         <div className="bg-secondary px-5 py-3 rounded-t-sm flex items-center justify-between">
           <h3 className="text-neutral-dark text-xl font-semibold">
@@ -65,7 +65,7 @@ const Hero = () => {
           ))}
         </div>
       </section>
-    </section>
+    </>
   );
 };
 

@@ -1,12 +1,14 @@
-import { introProducts } from "@/components/Exports";
+import { introProducts} from "@/components/Exports";
 import Image from "next/image";
-import { FaCartPlus, FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 import ProductDetails from "@/components/ProductDetails";
 import Specifications from "./Specifications";
+import AddCartButton from "./AddCartButton";
 
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
   const product = introProducts[id];
+
   return (
     <section className="w-8/11">
       <section className="bg-white p-4 rounded-sm flex items-start justify-between">
@@ -42,13 +44,7 @@ const Product = async ({ param }: { param: { id: number } }) => {
               </div>
               <p className="text-primary">(32 verified rating)</p>
             </div>
-            <button
-              type="submit"
-              className="bg-primary text-white p-3 rounded-md cursor-pointer flex items-center w-full mt-4 font-medium hover:bg-primary/90 duration-200"
-            >
-              <FaCartPlus className="text-xl" />
-              <span className="mx-auto">Add to cart</span>
-            </button>
+            <AddCartButton product={product} icon={true} addClass={"p-3"} />
           </div>
           <p className="text-xs text-primary cursor-pointer hover:underline">
             Report incorrect product information
