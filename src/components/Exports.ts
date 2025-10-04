@@ -226,11 +226,9 @@ export const sellers = [
     score: 90,
     followers: 120,
     sellPerformance: [
-      { shipingSpeed: 95 },
-      { qualityScore: 88 },
-      { customerRating: 72 },
+      { shipingSpeed: 95, qualityScore: 88, customerRating: 72 },
     ],
-    sellerInfo: [{ duration: "2 years", sales: 500 }],
+    sellerInfo: [{ duration: "2", sales: 500 }],
   },
   {
     name: "Jide Ogunsanya",
@@ -238,11 +236,9 @@ export const sellers = [
     score: 85,
     followers: 200,
     sellPerformance: [
-      { shipingSpeed: 80 },
-      { qualityScore: 90 },
-      { customerRating: 65 },
+      { shipingSpeed: 80, qualityScore: 90, customerRating: 65 },
     ],
-    sellerInfo: [{ duration: "1 year", sales: 300 }],
+    sellerInfo: [{ duration: "1", sales: 300 }],
   },
   {
     name: "JI Footwears",
@@ -250,11 +246,9 @@ export const sellers = [
     score: 88,
     followers: 250,
     sellPerformance: [
-      { shipingSpeed: 85 },
-      { qualityScore: 87 },
-      { customerRating: 80 },
+      { shipingSpeed: 85, qualityScore: 87, customerRating: 80 },
     ],
-    sellerInfo: [{ duration: "3 years", sales: 400 }],
+    sellerInfo: [{ duration: "3", sales: 400 }],
   },
   {
     name: "JoGad Ventures",
@@ -262,11 +256,9 @@ export const sellers = [
     score: 92,
     followers: 150,
     sellPerformance: [
-      { shipingSpeed: 90 },
-      { qualityScore: 95 },
-      { customerRating: 61 },
+      { shipingSpeed: 90, qualityScore: 95, customerRating: 61 },
     ],
-    sellerInfo: [{ duration: "4 years", sales: 600 }],
+    sellerInfo: [{ duration: "4", sales: 600 }],
   },
   {
     name: "Home Essentials",
@@ -274,11 +266,9 @@ export const sellers = [
     score: 87,
     followers: 100,
     sellPerformance: [
-      { shipingSpeed: 82 },
-      { qualityScore: 88 },
-      { customerRating: 68 },
+      { shipingSpeed: 82, qualityScore: 88, customerRating: 68 },
     ],
-    sellerInfo: [{ duration: "2 years", sales: 350 }],
+    sellerInfo: [{ duration: "2", sales: 350 }],
   },
   {
     name: "Fashion Hub",
@@ -286,11 +276,8 @@ export const sellers = [
     score: 89,
     followers: 110,
     sellPerformance: [
-      { shipingSpeed: 88 },
-      { qualityScore: 61 },
-      { customerRating: 50 },
+      { shipingSpeed: 88, qualityScore: 61, customerRating: 50 },
     ],
-    sellerInfo: [{ duration: "3 years", sales: 450 }],
+    sellerInfo: [{ duration: "3", sales: 450 }],
   },
 ];
-
