@@ -20,16 +20,16 @@ const SelectedItem = () => {
       </div>
       <div className="flex items-start justify-between p-3">
         <button
-        title="remove"
-          className="flex items-center gap-x-2 p-2 font-medium rounded-sm cursor-pointer text-primary hover:bg-primary/40 duration-150"
+          title="remove"
+          className="flex items-center gap-x-2 p-2 font-medium rounded-sm cursor-pointer text-primary hover:bg-primary/35 duration-150"
           type="submit"
         >
-          <FiTrash className="text-lg" />{" "}
+          <FiTrash className="text-lg" />
           <span className="text-sm">Remove</span>
         </button>
         <form method="post" className="flex items-center gap-x-3">
           <button
-          title="minus"
+            title="minus"
             className="font-bold text-lg rounded-md p-2 text-white bg-primary/85 cursor-pointer hover:bg-primary disabled:bg-gray-500"
             type="submit"
             disabled
@@ -38,7 +38,7 @@ const SelectedItem = () => {
           </button>
           <strong>1</strong>
           <button
-          title="plus"
+            title="plus"
             className="font-bold text-lg rounded-md p-2 text-white bg-primary/85 cursor-pointer hover:bg-primary"
             type="submit"
           >

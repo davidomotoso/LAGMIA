@@ -8,17 +8,17 @@ const SellerInfo = async ({ params }: { params: { id: number } }) => {
   const { id } = await params;
   return (
     <section className="bg-white rounded-sm shadow-md sticky top-2">
-      <Link
-        href=""
-        className="flex items-center justify-between font-medium border-b border-gray-200 p-2"
-      >
-        <h5 className="uppercase">Seller Information</h5>
-        <FaChevronRight />
-      </Link>
       {sellers
         .filter((seller) => seller.id == id)
         .map((seller, index) => (
           <div key={index} className="space-y-2">
+            <Link
+              href={`/seller/${seller.name.toLowerCase().split(" ").join("-")}`}
+              className="flex items-center justify-between font-medium border-b border-gray-200 p-2"
+            >
+              <h5 className="uppercase">Seller Information</h5>
+              <FaChevronRight />
+            </Link>
             <div className="p-2 space-y-2 border-b border-gray-200">
               <h5 className="font-semibold">{seller.name}</h5>
               <div className="flex items-center justify-between">
@@ -46,47 +46,67 @@ const SellerInfo = async ({ params }: { params: { id: number } }) => {
               <div className="flex items-center gap-x-1 text-sm">
                 <div
                   className={`${
-                    getAppraisal(seller.sellPerformance[0].shipingSpeed??0).color
+                    getAppraisal(seller.sellPerformance[0].shipingSpeed ?? 0)
+                      .color
                   } rounded-full p-1 text-white`}
                 >
-                  {getAppraisal(
-                    seller.sellPerformance[0].shipingSpeed ?? 0
-                  ).icon}
+                  {
+                    getAppraisal(seller.sellPerformance[0].shipingSpeed ?? 0)
+                      .icon
+                  }
                 </div>
                 <p>
                   Shipping speed:{" "}
                   <span className="font-medium">
-                    {getAppraisal(seller.sellPerformance[0].shipingSpeed??0).grade}
+                    {
+                      getAppraisal(seller.sellPerformance[0].shipingSpeed ?? 0)
+                        .grade
+                    }
                   </span>
                 </p>
               </div>
               <div className="flex items-center gap-x-1 text-sm">
                 <div
                   className={`${
-                    getAppraisal(seller.sellPerformance[1].qualityScore??0).color
+                    getAppraisal(seller.sellPerformance[0].qualityScore ?? 0)
+                      .color
                   } rounded-full p-1 text-white`}
                 >
-                  {getAppraisal(seller.sellPerformance[1].qualityScore??0).icon}
+                  {
+                    getAppraisal(seller.sellPerformance[0].qualityScore ?? 0)
+                      .icon
+                  }
                 </div>
                 <p>
                   Quality Score:{" "}
                   <span className="font-medium">
-                    {getAppraisal(seller.sellPerformance[1].qualityScore??0).grade}
+                    {
+                      getAppraisal(seller.sellPerformance[0].qualityScore ?? 0)
+                        .grade
+                    }
                   </span>
                 </p>
               </div>
               <div className="flex items-center gap-x-1 text-sm">
                 <div
                   className={`${
-                    getAppraisal(seller.sellPerformance[2].customerRating??0).color
+                    getAppraisal(seller.sellPerformance[0].customerRating ?? 0)
+                      .color
                   } rounded-full p-1 text-white`}
                 >
-                  {getAppraisal(seller.sellPerformance[2].customerRating??0).icon}
+                  {
+                    getAppraisal(seller.sellPerformance[0].customerRating ?? 0)
+                      .icon
+                  }
                 </div>
                 <p>
                   Customer Rating:{" "}
                   <span className="font-medium">
-                    {getAppraisal(seller.sellPerformance[2].customerRating??0).grade}
+                    {
+                      getAppraisal(
+                        seller.sellPerformance[0].customerRating ?? 0,
+                      ).grade
+                    }
                   </span>
                 </p>
               </div>
