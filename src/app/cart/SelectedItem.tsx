@@ -1,6 +1,7 @@
 import Counter from "@/components/Counter";
 import { useCartStore } from "@/Utils/storeCart";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { FiTrash } from "react-icons/fi";
 
 const SelectedItem = () => {
@@ -9,7 +10,7 @@ const SelectedItem = () => {
     price: string;
     name: string;
     quantity: number;
-    id:number
+    id: number;
   }[];
   return (
     <section className="bg-white rounded-sm w-8/11 mb-4">
@@ -17,17 +18,19 @@ const SelectedItem = () => {
         Cart ({cart.length} items)
       </h3>
       {cart.map((item, index) => (
-        <div key={index} className="not-last:border-b border-gray-300">
+        <div key={index} className="not-last:border-b border-gray-200">
           <div className="flex items-start justify-between p-3">
             <div className="flex items-start gap-x-3">
               <Image
                 className="w-18 h-18 rounded-sm object-cover"
                 src={item.image}
-                alt=""
+                alt={item.name}
               />
               <div>
-                <h4 className="text-lg">{item.name}</h4>
-                <p className="text-sm text-gray-600">{"In stock"}</p>
+                <h4 className="text-lg hover:text-secondary duration-200">
+                  <Link href={`top-sellers/${item.id}`}> {item.name}</Link>
+                </h4>
+                <p className="text-sm text-gray-400">{"In stock"}</p>
               </div>
             </div>
             <h3 className="text-xl font-semibold">{item.price}</h3>
@@ -41,7 +44,7 @@ const SelectedItem = () => {
               <FiTrash className="text-lg" />
               <span className="text-sm">Remove</span>
             </button>
-            <Counter item={{ id:item.id, quantity: item.quantity }} />
+            <Counter item={{ id: item.id, quantity: item.quantity }} counterClass={""} />
           </div>
         </div>
       ))}
