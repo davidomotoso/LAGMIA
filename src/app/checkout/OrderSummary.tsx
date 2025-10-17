@@ -15,7 +15,7 @@ const OrderSummary = () => {
           Item's total ({cart.length})<span className="font-medium float-right">{calTotalPrice()}</span>
         </li>
         <li>
-          Delivery fees<span className="font-medium float-right">₦500</span>
+          Delivery fees<span className="font-medium float-right">₦{500*cart.length}</span>
         </li>
       </ul>
       <div className="flex items-center justify-between p-2 font-medium border-b border-gray-200">

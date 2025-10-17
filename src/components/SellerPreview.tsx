@@ -19,13 +19,13 @@ const SellerPreview = ({ seller, addClass, visible }: SellerPreviewProps) => {
           <h3 className="text-xl">{seller.name}</h3>
           {visible && (
             <Link
-              className="text-sm flex items-center gap-x-1 text-primary/85 hover:text-primary duration-150"
+              className="group text-sm flex items-center gap-x-1 text-primary/80 hover:text-primary duration-150"
               href={`profile/${seller.name
                 .toLocaleLowerCase()
                 .split(" ")
                 .join("-")}`}
             >
-              See Profile <FaChevronRight />
+              See Profile <FaChevronRight className="group-hover:pl-1 duration-250" />
             </Link>
           )}
         </div>

@@ -4,26 +4,32 @@ import { useCartStore } from "@/Utils/storeCart";
 import Counter from "./Counter";
 import { StaticImageData } from "next/image";
 
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  image: StaticImageData;
-  quantity: number;
-  seller:string
+interface CartButtonsProps {
+  product: {
+    id: number;
+    name: string;
+    price: string;
+    image: StaticImageData;
+    quantity: number;
+    seller: string;
+  };
+  icon: boolean;
+  addClass: string;
+  counterClass:string
 }
 
-const CartButtons = ({ product }: { product: Product }) => {
+const CartButtons = ({ product,icon,addClass,counterClass }: CartButtonsProps) => {
   const cart = useCartStore((state) => state.cart) as {
     id: number;
     quantity: number;
   }[];
-  const getQuantity = cart.find((item) => item.id === product.id)?.quantity ?? 0;
+  const getQuantity =
+    cart.find((item) => item.id === product.id)?.quantity ?? 0;
   const isInCart = getQuantity > 0;
   return (
     <>
       {isInCart ? (
-        <Counter item={{ id: product.id, quantity: getQuantity }} />
+        <Counter item={{ id: product.id, quantity: getQuantity }} counterClass={counterClass} />
       ) : (
         <AddCartButton
           product={{
@@ -32,10 +38,10 @@ const CartButtons = ({ product }: { product: Product }) => {
             image: product.image,
             id: product.id,
             quantity: product.quantity,
-            seller:product.seller
+            seller: product.seller,
           }}
-          icon={true}
-          addClass={"p-3"}
+          icon={icon}
+          addClass={addClass}
         />
       )}
     </>

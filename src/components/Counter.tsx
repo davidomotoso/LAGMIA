@@ -1,15 +1,14 @@
 import { useCartStore } from "@/Utils/storeCart";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
-const Counter = ({ item }: { item: { id: number; quantity: number } }) => {
+const Counter = ({ item, counterClass }: { item: { id: number; quantity: number }, counterClass:string }) => {
   const incrementQuantity = useCartStore((state) => state.incrementQuantity);
   const decrementQuantity = useCartStore((state) => state.decrementQuantity);
-  console.log(item.quantity);
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
       method="post"
-      className="flex items-center gap-x-3"
+      className={`flex items-center gap-x-3 ${counterClass}`}
     >
       <button
         title="minus"

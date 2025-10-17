@@ -2,7 +2,7 @@
 import Image from "next/image";
 import logo from "../../public/LAGMIA.png";
 import { FaUser } from "react-icons/fa";
-import { FaCartShopping, FaChevronDown } from "react-icons/fa6";
+import { FaCartShopping} from "react-icons/fa6";
 import Link from "next/link";
 import { useCartStore } from "@/Utils/storeCart";
 const Navbar = () => {
@@ -25,11 +25,10 @@ const Navbar = () => {
       />
       <nav>
         <ul className="flex gap-8 text-gray-600 font-medium text-lg">
-          <Link href="">
+          <Link href="/customer/profile">
             <li className="flex items-center gap-x-2 hover:text-secondary duration-200">
               <FaUser />
               Account
-              <FaChevronDown />
             </li>
           </Link>
           <Link href="/cart">

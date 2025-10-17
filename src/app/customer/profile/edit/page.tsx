@@ -1,12 +1,14 @@
 import Navbar from "@/components/Navbar";
-import AccountNav from "./AccountNav";
+import Nav from "../../Nav";
+import EditAddress from "@/components/EditAddress";
 
 const page = () => {
   return (
     <>
       <Navbar />
       <section className="text-neutral-dark flex items-start justify-between">
-        <AccountNav/>
+        <Nav />
+        <EditAddress back={"/customer/profile"}/>
       </section>
     </>
   );

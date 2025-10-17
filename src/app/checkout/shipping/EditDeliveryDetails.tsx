@@ -35,8 +35,8 @@ const EditDeliveryDetails = () => {
               </label>
             </div>
             <p className="text-xs text-gray-600 pl-6.5">
-              Delivery between <strong>{getDeliveryDate(3)}</strong> and{" "}
-              <strong>{getDeliveryDate(6)}</strong>
+              Delivery between <strong>{getDeliveryDate(4)}</strong> and{" "}
+              <strong>{getDeliveryDate(7)}</strong>
             </p>
           </div>
           <BsHouseFill className="text-secondary text-2xl" />
@@ -49,6 +49,7 @@ const EditDeliveryDetails = () => {
                 type="radio"
                 name="preferred-delivery"
                 id="door-delivery"
+                checked={true}
                 className="h-4.5 w-4.5 group-hover:before:bg-primary/30 before:duration-200 before:-left-1.5 before:-top-1.5 before:rounded-full before:absolute before:w-7.5 before:h-7.5 relative accent-primary"
               />
               <label className="font-medium" htmlFor="door-delivery">

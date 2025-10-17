@@ -1,4 +1,4 @@
-import { introProducts,sellers } from "@/components/Exports";
+import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 import ProductDetails from "@/components/ProductDetails";
@@ -8,7 +8,7 @@ import CartButtons from "./CartButtons";
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
   const product = introProducts[id];
-  const seller=sellers[id]
+  const seller = sellers[id];
 
   return (
     <section className="w-8/11">
@@ -32,7 +32,7 @@ const Product = async ({ param }: { param: { id: number } }) => {
           </div>
           <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
             <h3 className="text-2xl font-bold">{product.price}</h3>
-            <p className="text-gray-600 text-sm">In stock</p>
+            <p className="text-gray-400 text-sm">In stock</p>
             <p className="text-sm">+ shipping calculated at checkout</p>
             <div className="flex items-center gap-x-2">
               <div className="flex gap-x-1 items-center">
@@ -45,7 +45,19 @@ const Product = async ({ param }: { param: { id: number } }) => {
               </div>
               <p className="text-primary">(32 verified rating)</p>
             </div>
-            <CartButtons product={{ name: product.name, image: product.image, id: product.id, price: product.price,quantity:1 , seller:seller.name}} />
+            <CartButtons
+              product={{
+                name: product.name,
+                image: product.image,
+                id: product.id,
+                price: product.price,
+                quantity: 1,
+                seller: seller.name,
+              }}
+              icon={true}
+              addClass={"p-3"}
+              counterClass={""}
+            />
           </div>
           <p className="text-xs text-primary cursor-pointer hover:underline">
             Report incorrect product information
