@@ -32,10 +32,10 @@ const Nav = () => {
             <li key={index}>
               <Link
                 href={nav.link}
-                className={`flex items-center gap-x-4 p-3 pl-5 duration-100 w-full ${
+                className={`flex items-center gap-x-4 p-3 pl-5 duration-100 w-full border-l-4 ${
                   isActive
-                    ? "font-medium bg-gray-300"
-                    : "hover:font-medium hover:bg-gray-200/50"
+                    ? "font-medium bg-gray-300 border-blue-500"
+                    : "hover:font-medium hover:bg-gray-200/50 border-transparent"
                 }`}
               >
                 {nav.icon}

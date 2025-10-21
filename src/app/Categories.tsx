@@ -19,15 +19,15 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/phones-tablets"}
           >
-            <FaTabletScreenButton /> Phones
+            <FaTabletScreenButton /> Phones & Tablets
           </Link>
         </li>
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/computing"}
           >
             <FaDesktop /> Computing
           </Link>
@@ -35,7 +35,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/health-beauty"}
           >
             <FaNotesMedical /> Health & Beauty
           </Link>
@@ -43,7 +43,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/electronics"}
           >
             <FaPlugCircleBolt /> Electronics
           </Link>
@@ -51,7 +51,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/fashion"}
           >
             <FaVest /> Fashion
           </Link>
@@ -59,7 +59,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/home-appliances"}
           >
             <FaFan /> Home Appliances
           </Link>
@@ -67,7 +67,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category/books"}
           >
             <FaBook /> Books
           </Link>
@@ -75,7 +75,7 @@ const Catergories = () => {
         <li>
           <Link
             className="flex items-center gap-x-2 hover:text-secondary duration-200"
-            href=""
+            href={"/category"}
           >
             <BsThreeDots /> More
           </Link>

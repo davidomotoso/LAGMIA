@@ -1,14 +1,14 @@
+import CategoryOptions from "@/components/CategoryOptions";
 import Navbar from "@/components/Navbar";
-import AccountNav from "../AccountNav";
-import EditDetails from "./EditDetails";
+import Products from "../Products";
 
 const page = () => {
   return (
     <>
       <Navbar />
       <section className="text-neutral-dark flex items-start justify-between">
-        <AccountNav/>
-        <EditDetails/>
+        <CategoryOptions category="Phones & Tablets"/>
+        <Products category="Phones & Tablets"/>
       </section>
     </>
   );
