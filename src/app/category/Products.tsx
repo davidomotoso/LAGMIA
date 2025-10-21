@@ -1,16 +1,16 @@
-import { introProducts } from "@/components/Exports";
+import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 import CartButtons from "@/components/CartButtons";
 
-const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
+const Products = ({category }: {category: string }) => {
   const filteredProducts = introProducts.filter(
-    (product) => product.id === seller.id,
+    (product) => product.category === category,
   );
   return (
     <section className="bg-white rounded-sm w-8/11 mb-3">
       <div className="flex items-center gap-x-3 p-3 border-b border-gray-200">
-        <h3 className="text-xl font-medium">{seller.name}</h3>
+        <h3 className="text-xl font-medium">{category}</h3>
         <p className="text-sm">({filteredProducts.length} products found)</p>
       </div>
       <div className="grid grid-cols-4 gap-4 mt-4 place-items-center py-2">
@@ -46,7 +46,7 @@ const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
                 id: product.id,
                 price: product.price,
                 quantity: 1,
-                seller: seller.name,
+                seller: sellers[product.id].name,
               }}
               icon={false}
               addClass={"py-2 text-sm relative -bottom-7 hidden group-hover:block"}
@@ -59,4 +59,4 @@ const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
   );
 };
 
-export default SellerProducts;
+export default Products;

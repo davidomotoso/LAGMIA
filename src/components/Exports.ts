@@ -191,31 +191,37 @@ export const categories = [
     id: 1,
     name: "Electronics",
     image: electronics,
+    link: "/category/electronics",
   },
   {
     id: 2,
     name: "Phones & Tablets",
     image: phonesTablets,
+    link: "/category/phones-tablets",
   },
   {
     id: 3,
     name: "Computing",
     image: computing,
+    link: "/category/computing",
   },
   {
     id: 4,
     name: "Fashion",
     image: fashion,
+    link: "/category/fashion",
   },
   {
     id: 5,
     name: "Health & Beauty",
     image: healthBeauty,
+    link: "/category/health-beauty",
   },
   {
     id: 6,
     name: "Home Appliances",
     image: homeAppliances,
+    link: "/category/home-appliances",
   },
 ];
 

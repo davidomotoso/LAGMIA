@@ -1,6 +1,6 @@
 import Image from "next/image";
 import banner from "../../public/banner.png";
-import Catergories from "./Catergories";
+import Catergories from "./Categories";
 import Hero from "./Hero";
 import Navbar from "@/components/Navbar";
 

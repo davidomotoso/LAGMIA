@@ -23,7 +23,7 @@ const auth = () => {
           id="auth"
           type="text"
           autoComplete="on"
-          placeholder="Mobile Number or Email..."
+          placeholder="Phone Number or Email..."
         />
         <button
           className="bg-primary/85 hover:bg-primary duration-150 cursor-pointer text-white font-medium text-center w-full p-4 rounded-sm"

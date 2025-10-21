@@ -15,10 +15,15 @@ interface CartButtonsProps {
   };
   icon: boolean;
   addClass: string;
-  counterClass:string
+  counterClass: string;
 }
 
-const CartButtons = ({ product,icon,addClass,counterClass }: CartButtonsProps) => {
+const CartButtons = ({
+  product,
+  icon,
+  addClass,
+  counterClass,
+}: CartButtonsProps) => {
   const cart = useCartStore((state) => state.cart) as {
     id: number;
     quantity: number;
@@ -29,14 +34,17 @@ const CartButtons = ({ product,icon,addClass,counterClass }: CartButtonsProps) =
   return (
     <>
       {isInCart ? (
-        <Counter item={{ id: product.id, quantity: getQuantity }} counterClass={counterClass} />
+        <Counter
+          item={{ id: product.id, quantity: getQuantity, }}
+          counterClass={counterClass}
+        />
       ) : (
         <AddCartButton
           product={{
+            id: product.id,
             name: product.name,
             price: product.price,
             image: product.image,
-            id: product.id,
             quantity: product.quantity,
             seller: product.seller,
           }}

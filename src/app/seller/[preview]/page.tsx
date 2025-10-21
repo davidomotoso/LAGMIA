@@ -1,4 +1,4 @@
-import Preference from "@/components/Preference";
+import Preference from "./Preference";
 import SellerProducts from "./SellerProducts";
 import { sellers } from "@/components/Exports";
 import SellerPreview from "@/components/SellerPreview";

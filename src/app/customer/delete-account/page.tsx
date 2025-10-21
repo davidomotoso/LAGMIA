@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import AccountNav from "../AccountNav";
-import EditDetails from "./EditDetails";
+import ValidateDelete from "./ValidateDelete";
 
 const page = () => {
   return (
@@ -8,7 +8,7 @@ const page = () => {
       <Navbar />
       <section className="text-neutral-dark flex items-start justify-between">
         <AccountNav/>
-        <EditDetails/>
+        <ValidateDelete/>
       </section>
     </>
   );

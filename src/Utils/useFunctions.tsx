@@ -69,9 +69,10 @@ const useFunctions = () => {
   };
 
   const calPriceAndDeliveryFee = (price: string, fee: number | string) => {
-    const cart = useCartStore.getState().cart
+    const cart = useCartStore.getState().cart;
     const filteredPrice = parseFloat(price.replace(/[^0-9.-]+/g, ""));
-    const numericFee = typeof fee === "string" ? parseFloat(fee) || 0 : fee*cart.length;
+    const numericFee =
+      typeof fee === "string" ? parseFloat(fee) || 0 : fee * cart.length;
 
     const total = filteredPrice + numericFee;
 
