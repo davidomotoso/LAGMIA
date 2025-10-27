@@ -30,7 +30,7 @@ const Hero = () => {
           ))}
         </div>
       </section>
-      <section className="shadow-md text-neutral-dark">
+      <section className="shadow-md text-neutral-dark mb-5">
         <div className="bg-secondary px-5 py-3 rounded-t-sm flex items-center justify-between">
           <h3 className="text-xl font-semibold">Products</h3>
           <Link
