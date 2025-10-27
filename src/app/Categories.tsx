@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ad from "../../public/unitrade-lagos-ad.jpg";
+import ad from "@/../public/ad.gif";
 import {
   FaBook,
   FaDesktop,
@@ -14,7 +14,7 @@ import Image from "next/image";
 
 const Catergories = () => {
   return (
-    <aside className="w-3/12 flex flex-col justify-between overflow-hidden">
+    <aside className="w-3/12 flex flex-col justify-between">
       <ul className="p-4 grid items-start gap-y-5 text-neutral-dark bg-white rounded-sm shadow-md">
         <li>
           <Link
