@@ -81,7 +81,7 @@ const Catergories = () => {
           </Link>
         </li>
       </ul>
-      <Image src={ad} alt="ad" className="h-5/18 rounded-sm" />
+      <Image src={ad} alt="ad" />
     </aside>
   );
 };
