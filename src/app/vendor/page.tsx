@@ -1,18 +1,26 @@
-import Navbar from "@/components/Navbar"
-import banner from "@/../public/vendor_banner.png"
-import  Image from "next/image"                                          
+import Navbar from "@/components/Navbar";
+import banner from "@/../public/vendor_banner.png";
+import Image from "next/image";
+import WhySellOnLagmia from "./WhySellOnLagmia";
+import HowItWorks from "./HowItWorks";
 
 const page = () => {
   return (
     <>
-    <Navbar />
-    <section>
+      <Navbar />
+      <section className="text-neutral-dark space-y-4">
         <section className="bg-white p-2 rounded-sm group">
-            <Image className="rounded-sm group-hover:scale-[1.005] duration-300" src={banner} alt="vendor banner"/>
+          <Image
+            className="rounded-sm group-hover:scale-[1.005] duration-300"
+            src={banner}
+            alt="vendor banner"
+          />
         </section>
-    </section>
+        <WhySellOnLagmia/>
+        <HowItWorks/>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
