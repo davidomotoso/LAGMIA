@@ -11,7 +11,7 @@ const page = () => {
       <section className="text-neutral-dark space-y-4">
         <section className="bg-white p-2 rounded-sm group">
           <Image
-            className="rounded-sm group-hover:scale-[1.005] duration-300"
+            className="rounded-sm group-hover:scale-[1.002] duration-300 h-80 object-cover"
             src={banner}
             alt="vendor banner"
           />

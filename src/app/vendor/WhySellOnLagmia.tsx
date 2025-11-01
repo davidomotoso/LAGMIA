@@ -15,7 +15,11 @@ const WhySellOnLagmia = () => {
           <li>Trusted & Secure Platform</li>
           <li>Dedicated Seller Support</li>
         </ul>
-        <Image className="h-68 object-[0-11rem] object-cover rounded-sm" src={SellOnLagmia} alt="people moving packages from a truck" />
+        <Image
+          className="h-68 w-6/10 object-[0-11rem] object-cover rounded-sm"
+          src={SellOnLagmia}
+          alt="people moving packages from a truck"
+        />
       </div>
     </section>
   );

@@ -20,7 +20,7 @@ const Overview = () => {
         <div className="w-19/39 rounded-sm border border-gray-300">
           <h5 className="font-medium p-3 border-b border-gray-200 uppercase flex items-center justify-between">
             Address Book
-            <Link href={"profile/edit"} className="text-secondary/85 grid place-content-center h-8 w-8 rounded-full duration-200 hover:bg-secondary/30">
+            <Link href={"profile/edit"} className="text-secondary/85 grid place-content-center p-2 rounded-full duration-200 hover:bg-secondary/30">
               <FaPen />
             </Link>
           </h5>

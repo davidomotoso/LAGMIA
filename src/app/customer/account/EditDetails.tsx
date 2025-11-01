@@ -1,6 +1,6 @@
 const EditDetails = () => {
   return (
-    <section className="bg-white rounded-sm w-8/12 py-4 px-6">
+    <section className="bg-white rounded-sm w-8/11 py-4 px-6">
       <h3 className="text-xl font-medium">Edit Details</h3>
       <form className="space-y-3 mt-8">
         <div>

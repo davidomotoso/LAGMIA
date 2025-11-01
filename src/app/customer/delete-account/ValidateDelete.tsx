@@ -1,8 +1,13 @@
+import { BsExclamationTriangle } from "react-icons/bs";
+
 const ValidateDelete = () => {
   return (
-    <section className="p-6 bg-white rounded-sm w-8/12 space-y-10">
+    <section className="p-6 bg-white rounded-sm w-8/11 space-y-10">
       <div className="text-center space-y-3">
-        <h3 className="text-xl font-bold">We hate to see you go!</h3>
+        <h3 className="text-xl font-bold flex items-center gap-x-2 justify-center">
+          <BsExclamationTriangle className="text-yellow-600 animate-pulse duration-200" />{" "}
+          We hate to see you go!
+        </h3>
         <p className="text-gray-600">
           Before you delete your account, please note that this action will
           permanently remove all your data across all Lagmia platforms. If

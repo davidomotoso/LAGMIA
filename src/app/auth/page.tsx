@@ -1,12 +1,13 @@
 import Image from "next/image"
 import logo from "@/../public/LAGMIA-logo.png"
+import Link from "next/link";
 
 const auth = () => {
   return (
     <section className="text-neutral-dark w-full grid place-content-center h-screen bg-white absolute top-0 left-0">
       <section className="space-y-7 w-[27rem]">
         <div className="space-y-1 text-center">
-       <Image className="mx-auto mb-2" src={logo} alt="lagmia logo"/>
+       <Image className="mx-auto mb-2 h-40 w-40 object-cover" src={logo} alt="lagmia logo" priority/>
         <h2 className="font-semibold text-2xl">Welcome to Lagmia</h2>
         <p>
           Input your e-mail or phone number to log in or create a Lagmia account.
@@ -34,9 +35,9 @@ const auth = () => {
         </button>
       </form>
       </section>
-      <p className="text-primary underline mt-1">
+      <Link href={"vendor"} className="text-primary hover:underline mt-2">
         Sell on Lagmia
-      </p>
+      </Link>
     </section>
   );
 };

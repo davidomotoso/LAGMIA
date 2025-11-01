@@ -53,7 +53,7 @@ const HowItWorks = () => {
         </li>
       </ul>
       <div className="grid place-items-center mt-10">
-        <Link href={""}>
+        <Link href={"vendor/auth"}>
           <button
             className="bg-secondary hover:bg-secondary/85 duration-200 cursor-pointer px-6 py-3 rounded-sm font-medium uppercase text-white text-sm shadow-md"
             title="Become a vendor on lagmia"
