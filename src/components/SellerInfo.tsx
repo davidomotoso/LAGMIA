@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa6";
 import { sellers } from "@/components/Exports";
-import useFunctions from "@/Utils/useFunctions";
+import useAppraisal from "@/app/hooks/useAppraisal";
 
 const SellerInfo = async ({ params }: { params: { id: number } }) => {
-  const { getAppraisal } = useFunctions();
+  const { getAppraisal } = useAppraisal();
   const { id } = await params;
   return (
     <section className="bg-white rounded-sm shadow-md sticky top-2">

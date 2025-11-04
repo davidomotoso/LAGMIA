@@ -1,7 +1,7 @@
 "use client";
 import { FaCartPlus } from "react-icons/fa6";
 import { useCartStore } from "@/Utils/storeCart";
-import useFunctions from "@/Utils/useFunctions";
+import useFunctions from "@/app/hooks/useFunctions";
 import { StaticImageData } from "next/image";
 
 interface AddCartButtonProps {

@@ -2,10 +2,10 @@
 import { useCartStore } from "@/Utils/storeCart";
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
-import useFunctions from "@/Utils/useFunctions";
+import useFunctions from "@/app/hooks/useFunctions";
 import { BsHouseFill } from "react-icons/bs";
 import { FaTruckFast } from "react-icons/fa6";
-import Image from "next/image"
+import Image from "next/image";
 
 const EditDeliveryDetails = () => {
   const cart = useCartStore((state) => state.cart);
@@ -65,33 +65,41 @@ const EditDeliveryDetails = () => {
         </li>
       </ul>
       <div className="grid grid-cols-2 gap-y-3 gap-x-4 p-4">
-      {cart.map((item, index) => (
-        <div className="space-y-1" key={index}>
-          <div className="flex items-center justify-between text-sm">
-            <h6 className="font-medium">Shipment {index+1}/{cart.length}</h6>
-            <p className="text-gray-600">Fulfilled by {item.seller}</p>
-          </div>
-          <div className="border border-gray-300 rounded-sm">
-            <div className="space-y-1 border-b border-gray-200 p-2">
-              <h5 className="font-medium">Door Delivery</h5>
-              <p className="text-xs text-gray-600">
-                Delivery between <strong>{getDeliveryDate(3)}</strong> and{" "}
-                <strong>{getDeliveryDate(6)}</strong>
-              </p>
+        {cart.map((item, index) => (
+          <div className="space-y-1" key={index}>
+            <div className="flex items-center justify-between text-sm">
+              <h6 className="font-medium">
+                Shipment {index + 1}/{cart.length}
+              </h6>
+              <p className="text-gray-600">Fulfilled by {item.seller}</p>
             </div>
-            <div className="p-2 flex items-start gap-x-2">
-              <div className="relative">
-                <Image className="w-14 h-14 rounded-xs object-cover" src={item.image} alt={item.name} />
-                <p className="text-xs bg-gray-300 absolute top-0 right-0 p-0.5 rounded-xs">x{item.quantity}</p>
+            <div className="border border-gray-300 rounded-sm">
+              <div className="space-y-1 border-b border-gray-200 p-2">
+                <h5 className="font-medium">Door Delivery</h5>
+                <p className="text-xs text-gray-600">
+                  Delivery between <strong>{getDeliveryDate(3)}</strong> and{" "}
+                  <strong>{getDeliveryDate(6)}</strong>
+                </p>
               </div>
-              <div className="text-sm">
-                <h6>{item.name}</h6>
-                <p className="text-gray-500">{item.price}</p>
+              <div className="p-2 flex items-start gap-x-2">
+                <div className="relative">
+                  <Image
+                    className="w-14 h-14 rounded-xs object-cover"
+                    src={item.image}
+                    alt={item.name}
+                  />
+                  <p className="text-xs bg-gray-300 absolute top-0 right-0 p-0.5 rounded-xs">
+                    x{item.quantity}
+                  </p>
+                </div>
+                <div className="text-sm">
+                  <h6>{item.name}</h6>
+                  <p className="text-gray-500">{item.price}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
     </section>
   );

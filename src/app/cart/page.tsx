@@ -10,16 +10,16 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-    <section className="flex items-start justify-between text-neutral-dark">
-      {cart.length ? (
-      <>
-          <SelectedItem />
-        <CartSummary />
-      </>
-      ) : (
-      <NoItem />
-      )}
-    </section>
+      <section className="flex items-start justify-between text-neutral-dark">
+        {cart.length ? (
+          <>
+            <SelectedItem />
+            <CartSummary />
+          </>
+        ) : (
+          <NoItem />
+        )}
+      </section>
     </>
   );
 };

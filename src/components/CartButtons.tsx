@@ -35,7 +35,7 @@ const CartButtons = ({
     <>
       {isInCart ? (
         <Counter
-          item={{ id: product.id, quantity: getQuantity, }}
+          item={{ id: product.id, quantity: getQuantity }}
           counterClass={counterClass}
         />
       ) : (

@@ -1,5 +1,5 @@
 import { useCartStore } from "@/Utils/storeCart";
-import useFunctions from "@/Utils/useFunctions";
+import useFunctions from "@/app/hooks/useFunctions";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
 const Counter = ({
@@ -23,7 +23,7 @@ const Counter = ({
         className="font-bold text-lg rounded-md p-2 text-white bg-primary/85 cursor-pointer hover:bg-primary disabled:bg-gray-500"
         type="submit"
         onClick={() => {
-          if(item.quantity===1){
+          if (item.quantity === 1) {
             alertMessage("Item removed from cart", "bg-red-600");
           }
           decrementQuantity(item.id);

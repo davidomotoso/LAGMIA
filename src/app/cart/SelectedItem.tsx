@@ -1,6 +1,6 @@
 import Counter from "@/components/Counter";
 import { useCartStore } from "@/Utils/storeCart";
-import useFunctions from "@/Utils/useFunctions";
+import useFunctions from "@/app/hooks/useFunctions";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FiTrash } from "react-icons/fi";

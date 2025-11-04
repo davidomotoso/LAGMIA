@@ -2,7 +2,7 @@
 import Image from "next/image";
 import logo from "../../public/LAGMIA.png";
 import { FaUser } from "react-icons/fa";
-import { FaCartShopping} from "react-icons/fa6";
+import { FaCartShopping } from "react-icons/fa6";
 import Link from "next/link";
 import { useCartStore } from "@/Utils/storeCart";
 const Navbar = () => {
