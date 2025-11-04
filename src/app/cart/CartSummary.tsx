@@ -1,8 +1,8 @@
-import useFunctions from "@/Utils/useFunctions";
 import Link from "next/link";
+import useCartFunctions from "../hooks/useCartFunctions";
 
 const CartSummary = () => {
-  const { calTotalPrice } = useFunctions();
+  const { calTotalPrice } = useCartFunctions();
   return (
     <section className="bg-white rounded-sm w-3/12 sticky top-2">
       <h5 className="uppercase p-2 border-b border-gray-200 font-medium">

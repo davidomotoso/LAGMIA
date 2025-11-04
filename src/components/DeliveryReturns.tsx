@@ -1,9 +1,10 @@
-import useDeliveryDate from "@/Utils/useFunctions";
 import { BsArrowCounterclockwise, BsHouse, BsTruck } from "react-icons/bs";
 import SellerInfo from "./SellerInfo";
+import useFunctions from "@/app/hooks/useFunctions";
+import Location from "./Location";
 
 const DeliveryReturns = ({ params }: { params: { id: number } }) => {
-  const { getDeliveryDate: getDeliveryDate } = useDeliveryDate();
+  const { getDeliveryDate } = useFunctions();
   return (
     <aside className="w-3/12 text-sm text-neutral-dark space-y-3">
       <section className="bg-white rounded-sm shadow-sm">
@@ -16,24 +17,7 @@ const DeliveryReturns = ({ params }: { params: { id: number } }) => {
         </p>
         <div className="space-y-3 p-2">
           <h4 className="text-lg font-medium">Choose your location</h4>
-          <select
-            className="p-4 border border-gray-300 rounded-md w-full"
-            name="Region"
-            title="Region"
-          >
-            <option value="akoka">Akoka (UNILAG)</option>
-            <option value="idi-araba">Idi-Araba (CMUL)</option>
-          </select>
-          <select
-            className="p-4 border border-gray-300 rounded-md w-full"
-            name="Vicinity"
-            title="Vicinity"
-          >
-            <option value="faculty of science ">Faculty of Science</option>
-            <option value="faculty of science ">Faculty of Science</option>
-            <option value="faculty of science ">Faculty of Science</option>
-            <option value="faculty of science ">Faculty of Science</option>
-          </select>
+         <Location addClass="p-4" labelClass="" visible={false} />
         </div>
         <div className="border-b border-gray-200 space-y-4 p-2 mt-2">
           <div className="flex items-start gap-x-3">
@@ -81,7 +65,7 @@ const DeliveryReturns = ({ params }: { params: { id: number } }) => {
           </div>
         </div>
       </section>
-      <SellerInfo params={params}/>
+      <SellerInfo params={params} />
     </aside>
   );
 };

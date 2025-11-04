@@ -1,4 +1,4 @@
-import useFunctions from "@/Utils/useFunctions";
+import useFunctions from "@/app/hooks/useFunctions";
 import Link from "next/link";
 import {
   FaChevronRight,
@@ -19,7 +19,8 @@ const CheckoutDetails = () => {
               className="group text-primary flex items-center gap-x-1 hover:text-primary/85"
               href={"checkout/address"}
             >
-              Change <FaChevronRight className="group-hover:pl-1 duration-250" />
+              Change{" "}
+              <FaChevronRight className="group-hover:pl-1 duration-250" />
             </Link>
           </div>
           <div className="p-3 space-y-2">
@@ -38,7 +39,8 @@ const CheckoutDetails = () => {
               className="group text-primary flex items-center gap-x-1 hover:text-primary/85"
               href={"checkout/shipping"}
             >
-              Change <FaChevronRight className="group-hover:pl-1 duration-250" />
+              Change{" "}
+              <FaChevronRight className="group-hover:pl-1 duration-250" />
             </Link>
           </div>
           <div className="p-3 space-y-2">

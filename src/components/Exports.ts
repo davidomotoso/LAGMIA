@@ -287,3 +287,52 @@ export const sellers = [
     sellerInfo: [{ duration: "3", sales: 450 }],
   },
 ];
+
+export const unilagLandmarks=[
+  "Senate Building",
+  "Faculty of Arts",
+  "Faculty of Science",
+  "Faculty of Engineering",
+  "Faculty of Law",
+  "Faculty of Management Sciences",
+  "Faculty of Education",
+  "Distance Learning Institute (DLI)",
+  "Institute of African Studies",
+  "Henry Carr Hall",
+  "Erastus Akingbola Hall",
+  "Queen Amina Hall",
+  "Eni Njoku Hall",
+  "Saburi Biobaku Hall",
+  "King Jaja Hall",
+  "Queen Moremi Hall",
+  "Mariere Hall",
+  "Sodeinde Hall",
+  "El kanemi Hall",
+  "Fagunwa Hall",
+  "Kofo Ademola Hall",
+  "Madam Tinubu Hall",
+  "Honours Hall",
+  "Makama-Bida Hall",
+  "Women Society Hostel",
+  "Femi Gbajabiamila Hostel",
+  "Health Centre",
+  "Main Library",
+  "Staff Quarters",
+  "Sports Centre",
+  "New Hall"
+]
+
+export const CmulLandmarks=[
+  "Administrative Building",
+  "Block Hostel",
+  "OPH",
+  "Cooperative Hostel",
+  "CMUL Library",
+  "Faculty of Pharmacy",
+  "Faculty of Clinical Sciences",
+  "Faculty of Basic Medical Sciences",
+  "Faculty of Dental Sciences",
+  "Research Hall",
+  "Guniess Eye center",
+  "Department of Community Health"
+]
