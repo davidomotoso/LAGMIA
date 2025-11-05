@@ -1,5 +1,5 @@
 import { sellers } from "@/components/Exports";
-import SellerPreview from "@/components/SellerPreview";
+import SellerPreview from "../../SellerPreview";
 import { FiArrowLeft } from "react-icons/fi";
 import Link from "next/link";
 import comingSoon from "@/../public/coming-soon.svg";

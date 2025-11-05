@@ -1,15 +1,15 @@
-import DeliveryReturns from "@/components/DeliveryReturns";
+import DeliveryReturns from "./DeliveryReturns";
 import Navbar from "@/components/Navbar";
-import Product from "@/components/Product";
+import Product from "./Product";
 
 const Page = ({ params }: { params: { id: number } }) => {
   return (
     <>
       <Navbar />
-    <section className="flex justify-between">
-      <Product param={params} />
-      <DeliveryReturns params={params}/>
-    </section>
+      <section className="flex justify-between">
+        <Product param={params} />
+        <DeliveryReturns params={params} />
+      </section>
     </>
   );
 };

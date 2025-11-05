@@ -8,3 +8,36 @@
   --width-46: 11.5rem;
   --height-46: 11.5rem;
 }
+
+/* no-arrows class to remove arrows in number inputs */
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-arrows {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Custom class for meter element */
+ /* Track (background) */
+meter::-webkit-meter-bar {
+  @apply h-1.75 rounded-full;
+  background:  #e5e7eb;
+}
+
+meter::-moz-meter-bar {
+  @apply h-1.75 rounded-full;
+  background:  #e5e7eb;
+}
+
+meter::-webkit-meter-optimum-value {
+  @apply h-full rounded-full;
+  background: #fd9900;
+}
+
+meter::-moz-meter-optimum::-moz-meter-bar {
+  @apply h-full rounded-full;
+  background: #fd9900;
+}
