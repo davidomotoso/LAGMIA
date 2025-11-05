@@ -1,7 +1,7 @@
 import { BsArrowCounterclockwise, BsHouse, BsTruck } from "react-icons/bs";
 import SellerInfo from "./SellerInfo";
 import useFunctions from "@/app/hooks/useFunctions";
-import Location from "./Location";
+import Location from "@/components/Location";
 
 const DeliveryReturns = ({ params }: { params: { id: number } }) => {
   const { getDeliveryDate } = useFunctions();

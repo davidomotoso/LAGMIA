@@ -1,9 +1,10 @@
 import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
-import ProductDetails from "@/components/ProductDetails";
+import ProductDetails from "./ProductDetails";
 import Specifications from "./Specifications";
-import CartButtons from "./CartButtons";
+import CartButtons from "@/components/CartButtons";
+import CustomerReviews from "./CustomerReviews";
 
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
@@ -66,6 +67,7 @@ const Product = async ({ param }: { param: { id: number } }) => {
       </section>
       <ProductDetails product={product} />
       <Specifications product={product} />
+      <CustomerReviews/>
     </section>
   );
 };

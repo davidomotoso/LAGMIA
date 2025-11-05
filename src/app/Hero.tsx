@@ -34,10 +34,10 @@ const Hero = () => {
         <div className="bg-secondary px-5 py-3 rounded-t-sm flex items-center justify-between">
           <h3 className="text-xl font-semibold">Products</h3>
           <Link
-            className="text-sm font-medium duration-150 hover:text-primary/70"
+            className="text-sm font-medium duration-150 hover:text-primary/70 flex items-center gap-x-1"
             href="/products"
           >
-            See all <FaChevronRight className="inline" />
+            See all <FaChevronRight />
           </Link>
         </div>
         <div className="grid grid-cols-6 bg-white gap-4 p-5 pb-3 shadow-md rounded-b-sm">
