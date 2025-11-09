@@ -1,13 +1,15 @@
 import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa6";
 import ProductDetails from "./ProductDetails";
 import Specifications from "./Specifications";
 import CartButtons from "@/components/CartButtons";
 import CustomerReviews from "./CustomerReviews";
+import RatingStars from "@/components/RatingStars";
+import useFunctions from "@/app/hooks/useFunctions";
 
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
+  const { handleRating } = useFunctions();
   const product = introProducts[id];
   const seller = sellers[id];
 
@@ -37,14 +39,11 @@ const Product = async ({ param }: { param: { id: number } }) => {
             <p className="text-sm">+ shipping calculated at checkout</p>
             <div className="flex items-center gap-x-2">
               <div className="flex gap-x-1 items-center">
-                {[...Array(5)].map((_, index) => (
-                  <FaStar
-                    key={index}
-                    className="text-gray-400/70 hover:text-secondary"
-                  />
-                ))}
+                <RatingStars rating={handleRating(product.rating)} />
               </div>
-              <p className="text-primary">(32 verified rating)</p>
+              <p className="text-primary">
+                ({product.rating.length} verified rating)
+              </p>
             </div>
             <CartButtons
               product={{
@@ -67,7 +66,15 @@ const Product = async ({ param }: { param: { id: number } }) => {
       </section>
       <ProductDetails product={product} />
       <Specifications product={product} />
-      <CustomerReviews/>
+      <CustomerReviews
+        reviewProps={{
+          id: product.id,
+          visibleIcon: false,
+          limit: 3,
+          rating: product.rating,
+          reviews: product.customerReviews,
+        }}
+      />
     </section>
   );
 };

@@ -2,7 +2,7 @@ import { introProducts } from "@/components/Exports";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-const TopSellers = () => {
+const Page = () => {
   return (
     <>
       <Navbar />
@@ -14,7 +14,7 @@ const TopSellers = () => {
             key={product.id}
           >
             <Image
-              className="rounded-md h-46 object-cover object-top"
+              className="rounded-md size-46 object-cover object-top"
               src={product.image}
               alt={product.name}
               placeholder="blur"
@@ -34,7 +34,7 @@ const TopSellers = () => {
             key={product.id}
           >
             <Image
-              className="rounded-md h-46 object-cover object-top"
+              className="rounded-md size-46 object-cover object-top"
               src={product.image}
               alt={product.name}
               placeholder="blur"
@@ -52,4 +52,4 @@ const TopSellers = () => {
   );
 };
 
-export default TopSellers;
+export default Page;

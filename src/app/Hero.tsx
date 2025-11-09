@@ -20,7 +20,7 @@ const Hero = () => {
               key={category.id}
             >
               <Image
-                className="rounded-md h-46 object-cover"
+                className="rounded-md size-46 object-cover"
                 src={category.image}
                 alt={category.name}
                 placeholder="blur"
@@ -48,7 +48,7 @@ const Hero = () => {
               key={product.id}
             >
               <Image
-                className="rounded-md h-46 object-cover object-top"
+                className="rounded-md size-46 object-cover object-top"
                 src={product.image}
                 alt={product.name}
                 placeholder="blur"

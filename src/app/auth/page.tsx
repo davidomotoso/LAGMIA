@@ -8,7 +8,7 @@ const auth = () => {
       <section className="space-y-7 w-[27rem]">
         <div className="space-y-1 text-center">
           <Image
-            className="mx-auto mb-2 h-40 w-40 object-cover"
+            className="mx-auto mb-2 size-40 object-cover"
             src={logo}
             alt="lagmia logo"
             priority

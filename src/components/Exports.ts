@@ -41,6 +41,25 @@ export const introProducts = [
       { label: "Model", value: "Foaming Facial Cleanser" },
       { label: "Weight", value: "0.5" },
     ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 5, 5],
+    customerReviews: [
+      {
+        username: "skincare_lover",
+        comment:
+          "This cleanser has transformed my skin! It removes all my makeup without drying me out. My skin feels so soft and balanced after every wash.",
+        title: "Gentle yet effective",
+        date: "2023-11-10",
+        rating: 5,
+      },
+      {
+        username: "sensitive_skin_guy",
+        comment:
+          "I have super sensitive skin, and this is the only cleanser that doesn't irritate me. It's gentle and keeps my skin clear.",
+        title: "Perfect for sensitive skin",
+        date: "2023-12-05",
+        rating: 4,
+      },
+    ],
   },
   {
     id: 1,
@@ -66,6 +85,25 @@ export const introProducts = [
     specifications: [
       { label: "Weight", value: "0.3" },
       { label: "Product Type", value: "Books" },
+    ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 5, 5],
+    customerReviews: [
+      {
+        username: "bookworm123",
+        comment:
+          "Empire of Vision is a masterpiece! The characters are so well-developed, and the plot kept me hooked from start to finish. Highly recommend to anyone who loves a good story.",
+        title: "A must-read novel",
+        date: "2023-10-20",
+        rating: 3,
+      },
+      {
+        username: "literature_fan",
+        comment:
+          "This book offers a profound exploration of ambition and power. The writing is beautiful, and the themes are very relevant. It made me think deeply about my own goals and values.",
+        title: "Thought-provoking and inspiring",
+        date: "2023-11-15",
+        rating: 4,
+      },
     ],
   },
   {
@@ -96,6 +134,25 @@ export const introProducts = [
       { label: "Color", value: "Cream" },
       { label: "Product Type", value: "Sneakers" },
     ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 4, 4, 1],
+    customerReviews: [
+      {
+        username: "sneakerhead",
+        comment:
+          "These New Balance sneakers are incredibly comfortable! I can wear them all day without any discomfort. Plus, they look great with almost any outfit.",
+        title: "Comfort meets style",
+        date: "2023-09-30",
+        rating: 5,
+      },
+      {
+        username: "fashionista",
+        comment:
+          "I love how versatile these sneakers are. They go well with both casual and semi-formal outfits. The quality is top-notch, and they hold up well even with daily wear.",
+        title: "Versatile and durable",
+        date: "2023-10-25",
+        rating: 4,
+      },
+    ],
   },
   {
     id: 3,
@@ -124,6 +181,41 @@ export const introProducts = [
       { label: "Weight", value: "0.234" },
       { label: "Color", value: "Phantom Black" },
       { label: "Product Type", value: "Smartphones" },
+    ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 5, 5, 4, 5, 4],
+    customerReviews: [
+      {
+        username: "tech_guru",
+        comment:
+          "The Galaxy S23 Ultra is a powerhouse! The camera quality is unmatched, and the display is stunning. Perfect for gaming and productivity.",
+        title: "A true flagship experience",
+        date: "2024-01-15",
+        rating: 4,
+      },
+      {
+        username: "photo_enthusiast",
+        comment:
+          "As a photography lover, the 200MP camera blew me away. The detail and color accuracy are incredible, even in low light conditions.",
+        title: "Revolutionary camera system",
+        date: "2024-02-10",
+        rating: 5,
+      },
+      {
+        username: "everyday_user",
+        comment:
+          "I use my S23 Ultra for everything from work to entertainment. The battery life is solid, and the S Pen is a game-changer for note-taking.",
+        title: "Versatile and reliable",
+        date: "2024-03-05",
+        rating: 3,
+      },
+      {
+        username: "gadget_fanatic",
+        comment:
+          "This phone has exceeded my expectations in every way. The build quality is premium, and the performance is top-notch. Highly recommend!",
+        title: "Exceeded expectations",
+        date: "2024-03-20",
+        rating: 5,
+      },
     ],
   },
   {
@@ -154,6 +246,25 @@ export const introProducts = [
       { label: "Color", value: "Black" },
       { label: "Product Type", value: "Microwave Ovens" },
     ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 5, 5],
+    customerReviews: [
+      {
+        username: "home_cook",
+        comment:
+          "This microwave has made my life so much easier! The pre-programmed settings are super helpful, and it heats food evenly every time.",
+        title: "Convenient and efficient",
+        date: "2023-08-12",
+        rating: 5,
+      },
+      {
+        username: "busy_student",
+        comment:
+          "Living in a dorm, this microwave is perfect for quick meals. It's compact but has a surprisingly large interior. The easy-clean feature is a lifesaver!",
+        title: "Perfect for small spaces",
+        date: "2023-09-01",
+        rating: 4,
+      },
+    ],
   },
   {
     id: 5,
@@ -182,6 +293,25 @@ export const introProducts = [
       { label: "Weight", value: "0.2" },
       { label: "Color", value: "Cream" },
       { label: "Product Type", value: "Shirts" },
+    ],
+    rating: [5, 4, 4, 3, 5, 1, 5, 3, 2, 1, 1, 3, 4, 5, 3, 4],
+    customerReviews: [
+      {
+        username: "fashion_enthusiast",
+        comment:
+          "This cream shirt is a wardrobe staple! The fabric is soft and breathable, and it fits perfectly. I've worn it to both casual and formal events, and it always looks great.",
+        title: "Stylish and comfortable",
+        date: "2023-07-22",
+        rating: 4,
+      },
+      {
+        username: "budget_buyer",
+        comment:
+          "I was surprised by the quality of this shirt at such an affordable price. It's versatile and goes well with almost anything in my closet.",
+        title: "Great value for money",
+        date: "2023-08-15",
+        rating: 4,
+      },
     ],
   },
 ];
@@ -288,7 +418,7 @@ export const sellers = [
   },
 ];
 
-export const unilagLandmarks=[
+export const unilagLandmarks = [
   "Senate Building",
   "Faculty of Arts",
   "Faculty of Science",
@@ -319,10 +449,10 @@ export const unilagLandmarks=[
   "Main Library",
   "Staff Quarters",
   "Sports Centre",
-  "New Hall"
-]
+  "New Hall",
+];
 
-export const CmulLandmarks=[
+export const CmulLandmarks = [
   "Administrative Building",
   "Block Hostel",
   "OPH",
@@ -334,5 +464,5 @@ export const CmulLandmarks=[
   "Faculty of Dental Sciences",
   "Research Hall",
   "Guniess Eye center",
-  "Department of Community Health"
-]
+  "Department of Community Health",
+];

@@ -6,10 +6,12 @@ import useFunctions from "@/app/hooks/useFunctions";
 import { BsHouseFill } from "react-icons/bs";
 import { FaTruckFast } from "react-icons/fa6";
 import Image from "next/image";
+import useCartFunctions from "@/app/hooks/useCartFunctions";
 
 const EditDeliveryDetails = () => {
   const cart = useCartStore((state) => state.cart);
   const { getDeliveryDate } = useFunctions();
+  const {handleDeliveryFee}=useCartFunctions()
   return (
     <section className="w-8/11 bg-white rounded-sm shadow-sm text-neutral-dark mb-3">
       <Link
@@ -53,7 +55,7 @@ const EditDeliveryDetails = () => {
                 className="h-4.5 w-4.5 group-hover:before:bg-primary/30 before:duration-200 before:-left-1.5 before:-top-1.5 before:rounded-full before:absolute before:w-7.5 before:h-7.5 relative accent-primary"
               />
               <label className="font-medium" htmlFor="door-delivery">
-                Door Delivery (₦{500 * cart.length})
+                Door Delivery ({handleDeliveryFee(cart.length)})
               </label>
             </div>
             <p className="text-xs text-gray-600 pl-6.5">
@@ -84,7 +86,7 @@ const EditDeliveryDetails = () => {
               <div className="p-2 flex items-start gap-x-2">
                 <div className="relative">
                   <Image
-                    className="w-14 h-14 rounded-xs object-cover"
+                    className="size-14 rounded-xs object-cover"
                     src={item.image}
                     alt={item.name}
                   />

@@ -26,7 +26,7 @@ const SelectedItem = () => {
           <div className="flex items-start justify-between p-3">
             <div className="flex items-start gap-x-3">
               <Image
-                className="w-18 h-18 rounded-sm object-cover"
+                className="size-18 rounded-sm object-cover"
                 src={item.image}
                 alt={item.name}
               />
