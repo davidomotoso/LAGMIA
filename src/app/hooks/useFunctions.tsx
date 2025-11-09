@@ -19,9 +19,21 @@ const useFunctions = () => {
     }, 2000);
   };
 
+  const handleRating = (rating: number[]) => {
+    return rating.reduce((acc, curr) => acc + curr, 0) / rating.length;
+  };
+
+  const handleFilterRatings = (rating: number[], filterValue: number) => {
+    const numberOfRates = rating.filter((rate) => rate === filterValue).length;
+    const percentageOfRates = (numberOfRates / rating.length) * 100;
+    return { numberOfRates, percentageOfRates };
+  };
+
   return {
     getDeliveryDate,
     alertMessage,
+    handleRating,
+    handleFilterRatings,
   };
 };
 export default useFunctions;

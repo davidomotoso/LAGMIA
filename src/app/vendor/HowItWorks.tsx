@@ -11,7 +11,7 @@ const HowItWorks = () => {
       <ul className="flex *:w-72 *:grid *:place-items-center *:space-y-2 items-start justify-around text-center">
         <li>
           <Image
-            className="rounded-full h-48 w-48 object-cover object-bottom"
+            className="rounded-full size-48 object-cover object-bottom"
             src={RegisterInMins}
             alt=""
           />
@@ -26,7 +26,7 @@ const HowItWorks = () => {
         </li>
         <li>
           <Image
-            className="rounded-full h-48 w-48 object-cover"
+            className="rounded-full size-48 object-cover"
             src={ListProduct}
             alt=""
           />
@@ -39,7 +39,7 @@ const HowItWorks = () => {
         </li>
         <li>
           <Image
-            className="rounded-full h-48 w-48 object-cover object-top"
+            className="rounded-full size-48 object-cover object-top"
             src={BoostSales}
             alt=""
           />

@@ -1,9 +1,12 @@
 import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa6";
 import CartButtons from "@/components/CartButtons";
+import Link from "next/link";
+import RatingStars from "@/components/RatingStars";
+import useFunctions from "../hooks/useFunctions";
 
 const Products = ({category }: {category: string }) => {
+  const { handleRating } = useFunctions();
   const filteredProducts = introProducts.filter(
     (product) => product.category === category,
   );
@@ -17,10 +20,11 @@ const Products = ({category }: {category: string }) => {
         {filteredProducts.map((product, index) => (
           <div
             key={index}
-            className="space-y-1 cursor-pointer  text-neutral-dark w-46 h-[22rem] hover:scale-[1.02] hover:shadow-md p-2 rounded-md duration-150 group"
+            className="space-y-1 cursor-pointer text-neutral-dark w-46 h-[22rem] hover:scale-[1.02] hover:shadow-md p-2 rounded-md duration-150 group"
           >
+            <Link href={`/products/${product.id}`}>
             <Image
-              className="rounded-md h-46 object-cover object-top"
+              className="rounded-md size-46 object-cover object-top"
               src={product.image}
               alt={product.name}
               placeholder="blur"
@@ -32,13 +36,9 @@ const Products = ({category }: {category: string }) => {
               <p className="font-medium">{product.price}</p>
             </div>
             <div className="flex gap-x-1 items-center">
-              {[...Array(5)].map((_, index) => (
-                <FaStar
-                  key={index}
-                  className="text-gray-400/70 hover:text-secondary"
-                />
-              ))}
+             <RatingStars rating={handleRating(product.rating)} />
             </div>
+            </Link>
             <CartButtons
               product={{
                 name: product.name,

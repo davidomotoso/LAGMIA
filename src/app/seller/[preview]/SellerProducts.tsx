@@ -1,9 +1,15 @@
 import { introProducts } from "@/components/Exports";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa6";
 import CartButtons from "@/components/CartButtons";
+import RatingStars from "@/components/RatingStars";
+import useFunctions from "@/app/hooks/useFunctions";
 
-const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
+const SellerProducts = ({
+  seller,
+}: {
+  seller: { name: string; id: number };
+}) => {
+  const { handleRating } = useFunctions();
   const filteredProducts = introProducts.filter(
     (product) => product.id === seller.id,
   );
@@ -20,7 +26,7 @@ const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
             className="space-y-1 cursor-pointer  text-neutral-dark w-46 h-[22rem] hover:scale-[1.02] hover:shadow-md p-2 rounded-md duration-150 group"
           >
             <Image
-              className="rounded-md h-46 object-cover object-top"
+              className="rounded-md size-46 object-cover object-top"
               src={product.image}
               alt={product.name}
               placeholder="blur"
@@ -32,12 +38,7 @@ const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
               <p className="font-medium">{product.price}</p>
             </div>
             <div className="flex gap-x-1 items-center">
-              {[...Array(5)].map((_, index) => (
-                <FaStar
-                  key={index}
-                  className="text-gray-400/70 hover:text-secondary"
-                />
-              ))}
+              <RatingStars rating={handleRating(product.rating)} />
             </div>
             <CartButtons
               product={{
@@ -49,7 +50,9 @@ const SellerProducts = ({ seller }: { seller: { name: string,id:number } }) => {
                 seller: seller.name,
               }}
               icon={false}
-              addClass={"py-2 text-sm relative -bottom-7 hidden group-hover:block"}
+              addClass={
+                "py-2 text-sm relative -bottom-7 hidden group-hover:block"
+              }
               counterClass={"relative -bottom-10"}
             />
           </div>

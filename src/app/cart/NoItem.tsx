@@ -6,7 +6,7 @@ const NoItem = () => {
   return (
     <section className="bg-white rounded-sm text-neutral-dark py-8 w-full grid place-items-center gap-y-5">
       <Image
-        className="rounded-full bg-gray-200 p-2 w-28 h-28"
+        className="rounded-full bg-gray-200 p-2 size-28"
         src={cart}
         alt="cart"
       />

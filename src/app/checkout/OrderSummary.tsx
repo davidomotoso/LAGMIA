@@ -3,7 +3,8 @@ import { useCartStore } from "@/Utils/storeCart";
 import useCartFunctions from "../hooks/useCartFunctions";
 
 const OrderSummary = () => {
-  const { calTotalPrice, calPriceAndDeliveryFee } = useCartFunctions();
+  const { calTotalPrice, calPriceAndDeliveryFee, handleDeliveryFee } =
+    useCartFunctions();
   const cart = useCartStore((state) => state.cart);
   return (
     <section className="w-3/12 bg-white rounded-sm text-neutral-dark text-sm">
@@ -17,7 +18,9 @@ const OrderSummary = () => {
         </li>
         <li>
           Delivery fees
-          <span className="font-medium float-right">₦{500 * cart.length}</span>
+          <span className="font-medium float-right">
+            {handleDeliveryFee(cart.length)}
+          </span>
         </li>
       </ul>
       <div className="flex items-center justify-between p-2 font-medium border-b border-gray-200">

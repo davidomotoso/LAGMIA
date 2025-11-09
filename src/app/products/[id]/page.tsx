@@ -6,7 +6,7 @@ const Page = ({ params }: { params: { id: number } }) => {
   return (
     <>
       <Navbar />
-      <section className="flex justify-between">
+      <section className="flex justify-between mb-5">
         <Product param={params} />
         <DeliveryReturns params={params} />
       </section>
