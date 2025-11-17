@@ -11,7 +11,7 @@ const SellerProducts = ({
 }) => {
   const { handleRating } = useFunctions();
   const filteredProducts = introProducts.filter(
-    (product) => product.id === seller.id,
+    (product) => product.sellerId === seller.id,
   );
   return (
     <section className="bg-white rounded-sm w-8/11 mb-3">

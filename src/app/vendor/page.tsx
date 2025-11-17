@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar";
 import banner from "@/../public/vendor_banner.png";
 import Image from "next/image";
 import WhySellOnLagmia from "./WhySellOnLagmia";
 import HowItWorks from "./HowItWorks";
+import Navbar from "./Navbar";
 
 const page = () => {
   return (

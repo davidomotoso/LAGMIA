@@ -21,15 +21,15 @@
 }
 
 /* Custom class for meter element */
- /* Track (background) */
+/* Track (background) */
 meter::-webkit-meter-bar {
   @apply h-1.75 rounded-full;
-  background:  #e5e7eb;
+  background: #e5e7eb;
 }
 
 meter::-moz-meter-bar {
   @apply h-1.75 rounded-full;
-  background:  #e5e7eb;
+  background: #e5e7eb;
 }
 
 meter::-webkit-meter-optimum-value {

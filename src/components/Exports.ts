@@ -17,6 +17,7 @@ import healthBeauty from "../../public/health-beauty.jpg";
 export const introProducts = [
   {
     id: 0,
+    sellerId: 0,
     name: "Cerave Foaming Facial Cleanser",
     price: "₦8,500",
     image: cerveFoamingFacialCleanser,
@@ -60,9 +61,12 @@ export const introProducts = [
         rating: 4,
       },
     ],
+    qty: 120,
+    qtySold: 80,
   },
   {
     id: 1,
+    sellerId: 1,
     name: "Empire of Vision",
     price: "₦10,000",
     image: empireOfVision,
@@ -105,9 +109,12 @@ export const introProducts = [
         rating: 4,
       },
     ],
+    qty: 156,
+    qtySold: 140,
   },
   {
     id: 2,
+    sellerId: 2,
     name: "New Balance",
     price: "₦25,000",
     image: newBalance,
@@ -153,9 +160,12 @@ export const introProducts = [
         rating: 4,
       },
     ],
+    qty: 56,
+    qtySold: 54,
   },
   {
     id: 3,
+    sellerId: 3,
     name: "Samsung Galaxy S23 Ultra",
     price: "₦1,200,000",
     image: samsungGalaxyS23Ultra,
@@ -217,9 +227,12 @@ export const introProducts = [
         rating: 5,
       },
     ],
+    qty: 50,
+    qtySold: 20,
   },
   {
     id: 4,
+    sellerId: 4,
     name: "Microwave",
     price: "₦45,000",
     image: microwave,
@@ -265,9 +278,12 @@ export const introProducts = [
         rating: 4,
       },
     ],
+    qty: 50,
+    qtySold: 27,
   },
   {
     id: 5,
+    sellerId: 5,
     name: "Cream Shirt",
     price: "₦7,500",
     image: creamShirt,
@@ -313,6 +329,8 @@ export const introProducts = [
         rating: 4,
       },
     ],
+    qty: 100,
+    qtySold: 45,
   },
 ];
 
