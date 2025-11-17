@@ -29,11 +29,26 @@ const useFunctions = () => {
     return { numberOfRates, percentageOfRates };
   };
 
+  const getStockStatus = (qty: number, qtySold: number) => {
+    if (qtySold >= qty) return { text: "Out Of Stock", color: "text-gray-600" };
+    const soldPercentage = (qtySold / qty) * 100;
+    const unit = qty - qtySold;
+
+    if (soldPercentage < 70) {
+      return { text: "In Stock", color: "text-green-600" };
+    } else if (unit !>= 7) {
+      return { text: "Few Units Left", color: "text-yellow-600" };
+    } else {
+      return { text: `${unit} Units Left`, color: "text-red-600" };
+    }
+  };
+
   return {
     getDeliveryDate,
     alertMessage,
     handleRating,
     handleFilterRatings,
+    getStockStatus,
   };
 };
 export default useFunctions;

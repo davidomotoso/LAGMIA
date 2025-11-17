@@ -2,7 +2,7 @@ import { introProducts } from "@/components/Exports";
 
 const Preference = ({ seller }: { seller: { id: number } }) => {
   const filteredProducts = introProducts.filter(
-    (product) => product.id === seller.id,
+    (product) => product.sellerId === seller.id,
   );
   const uniqueCategories = [
     ...new Set(filteredProducts.map((product) => product.category)),

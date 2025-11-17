@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import logo from "../../public/LAGMIA.png";
+import logo from "@/../public/LAGMIA.png";
 import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import Link from "next/link";
@@ -25,14 +25,20 @@ const Navbar = () => {
       />
       <nav>
         <ul className="flex gap-8 text-gray-600 font-medium text-lg">
-          <Link href="/customer/profile">
-            <li className="flex items-center gap-x-2 hover:text-secondary duration-200">
+          <li>
+            <Link
+              className="flex items-center gap-x-2 hover:text-secondary duration-200"
+              href="/customer/profile"
+            >
               <FaUser />
               Account
-            </li>
-          </Link>
-          <Link href="/cart">
-            <li className="flex items-center gap-x-2 hover:text-secondary duration-200 relative">
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="flex items-center gap-x-2 hover:text-secondary duration-200"
+              href="/cart"
+            >
               <FaCartShopping />
               Cart
               {cart.length > 0 && (
@@ -40,8 +46,8 @@ const Navbar = () => {
                   {cart.length}
                 </span>
               )}
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

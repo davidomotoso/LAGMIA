@@ -9,7 +9,7 @@ import useFunctions from "@/app/hooks/useFunctions";
 
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
-  const { handleRating } = useFunctions();
+  const { handleRating, getStockStatus } = useFunctions();
   const product = introProducts[id];
   const seller = sellers[id];
 
@@ -35,7 +35,7 @@ const Product = async ({ param }: { param: { id: number } }) => {
           </div>
           <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
             <h3 className="text-2xl font-bold">{product.price}</h3>
-            <p className="text-gray-400 text-sm">In stock</p>
+            <p className={`${getStockStatus(product.qty,product.qtySold).color} text-sm`}>{getStockStatus(product.qty,product.qtySold).text}</p>
             <p className="text-sm">+ shipping calculated at checkout</p>
             <div className="flex items-center gap-x-2">
               <div className="flex gap-x-1 items-center">
