@@ -8,14 +8,22 @@ const useUploads = () => {
 
   const handlePdf = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (!file) return;
-    if (file.type !== "application/pdf") {
-      alertMessage("Please upload a PDF file only!", "bg-red-500");
+    if (!file) return setFileName("");
+
+    const errors = {
+      type: file.type !== "application/pdf" && "Please upload a PDF file only!",
+      size: file.size > 1 * 1024 * 1024 && "File too large! Max 1MB allowed.",
+    };
+
+    const errorMsg = errors.type || errors.size;
+    if (errorMsg) {
+      alertMessage(errorMsg, "bg-red-500");
       e.target.value = "";
       setFileName("");
-    } else {
-      setFileName(file.name);
+      return;
     }
+
+    setFileName(file.name);
   };
 
   const handleClearFile = () => {

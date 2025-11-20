@@ -21,7 +21,6 @@
 }
 
 /* Custom class for meter element */
-/* Track (background) */
 meter::-webkit-meter-bar {
   @apply h-1.75 rounded-full;
   background: #e5e7eb;

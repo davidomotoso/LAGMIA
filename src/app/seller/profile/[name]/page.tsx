@@ -61,81 +61,60 @@ const page = async ({ params }: { params: { name: string } }) => {
                     Seller performance
                   </h6>
                   <div className="p-3 space-y-2">
-                    <div className="flex items-center gap-x-1">
-                      <div
-                        className={`${
-                          getAppraisal(
-                            seller.sellPerformance[0].shipingSpeed ?? 0,
-                          ).color
-                        } rounded-full p-1 text-white`}
-                      >
-                        {
-                          getAppraisal(
-                            seller.sellPerformance[0].shipingSpeed ?? 0,
-                          ).icon
-                        }
-                      </div>
-                      <p>
-                        Shipping speed:{" "}
-                        <span className="font-medium">
-                          {
-                            getAppraisal(
-                              seller.sellPerformance[0].shipingSpeed ?? 0,
-                            ).grade
-                          }
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-x-1">
-                      <div
-                        className={`${
-                          getAppraisal(
-                            seller.sellPerformance[0].qualityScore ?? 0,
-                          ).color
-                        } rounded-full p-1 text-white`}
-                      >
-                        {
-                          getAppraisal(
-                            seller.sellPerformance[0].qualityScore ?? 0,
-                          ).icon
-                        }
-                      </div>
-                      <p>
-                        Quality Score:{" "}
-                        <span className="font-medium">
-                          {
-                            getAppraisal(
-                              seller.sellPerformance[0].qualityScore ?? 0,
-                            ).grade
-                          }
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-x-1">
-                      <div
-                        className={`${
-                          getAppraisal(
-                            seller.sellPerformance[0].customerRating ?? 0,
-                          ).color
-                        } rounded-full p-1 text-white`}
-                      >
-                        {
-                          getAppraisal(
-                            seller.sellPerformance[0].customerRating ?? 0,
-                          ).icon
-                        }
-                      </div>
-                      <p>
-                        Customer Rating:{" "}
-                        <span className="font-medium">
-                          {
-                            getAppraisal(
-                              seller.sellPerformance[0].customerRating ?? 0,
-                            ).grade
-                          }
-                        </span>
-                      </p>
-                    </div>
+                    {(() => {
+                      const shippingAppraisal = getAppraisal(
+                        seller.sellPerformance[0].shipingSpeed,
+                      );
+                      const qualityAppraisal = getAppraisal(
+                        seller.sellPerformance[0].qualityScore,
+                      );
+                      const customerAppraisal = getAppraisal(
+                        seller.sellPerformance[0].customerRating,
+                      );
+                      return (
+                        <>
+                          <div className="flex items-center gap-x-1">
+                            <div
+                              className={`${shippingAppraisal.color} rounded-full p-1 text-white`}
+                            >
+                              {shippingAppraisal.icon}
+                            </div>
+                            <p>
+                              Shipping speed:{" "}
+                              <span className="font-medium">
+                                {shippingAppraisal.grade}
+                              </span>
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-x-1">
+                            <div
+                              className={`${qualityAppraisal.color} rounded-full p-1 text-white`}
+                            >
+                              {qualityAppraisal.icon}
+                            </div>
+                            <p>
+                              Quality Score:{" "}
+                              <span className="font-medium">
+                                {qualityAppraisal.grade}
+                              </span>
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-x-1">
+                            <div
+                              className={`${customerAppraisal.color} rounded-full p-1 text-white`}
+                            >
+                              {customerAppraisal.icon}
+                            </div>
+                            <p>
+                              Customer Rating:{" "}
+                              <span className="font-medium">
+                                {customerAppraisal.grade}
+                              </span>
+                            </p>
+                          </div>
+                        </>
+                      );
+                    })()}
                   </div>
                 </div>
               </div>
