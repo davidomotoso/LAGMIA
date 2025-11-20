@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/../public/LAGMIA-logo.png";
+import logo from "@/../public/LAGMIA-auth.png";
 import Link from "next/link";
 
 const auth = () => {

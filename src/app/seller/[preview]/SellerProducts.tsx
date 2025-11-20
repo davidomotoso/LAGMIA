@@ -3,6 +3,7 @@ import Image from "next/image";
 import CartButtons from "@/components/CartButtons";
 import RatingStars from "@/components/RatingStars";
 import useFunctions from "@/app/hooks/useFunctions";
+import Link from "next/link";
 
 const SellerProducts = ({
   seller,
@@ -25,21 +26,23 @@ const SellerProducts = ({
             key={index}
             className="space-y-1 cursor-pointer  text-neutral-dark w-46 h-[22rem] hover:scale-[1.02] hover:shadow-md p-2 rounded-md duration-150 group"
           >
-            <Image
-              className="rounded-md size-46 object-cover object-top"
-              src={product.image}
-              alt={product.name}
-              placeholder="blur"
-            />
-            <div>
-              <h2 className="text-ellipsis whitespace-nowrap overflow-clip">
-                {product.name}
-              </h2>
-              <p className="font-medium">{product.price}</p>
-            </div>
-            <div className="flex gap-x-1 items-center">
-              <RatingStars rating={handleRating(product.rating)} />
-            </div>
+            <Link href={`/products/${product.id}`}>
+              <Image
+                className="rounded-md size-46 object-cover object-top"
+                src={product.image}
+                alt={product.name}
+                placeholder="blur"
+              />
+              <div>
+                <h2 className="text-ellipsis whitespace-nowrap overflow-clip">
+                  {product.name}
+                </h2>
+                <p className="font-medium">{product.price}</p>
+              </div>
+              <div className="flex gap-x-1 items-center">
+                <RatingStars rating={handleRating(product.rating)} />
+              </div>
+            </Link>
             <CartButtons
               product={{
                 name: product.name,

@@ -40,7 +40,7 @@ const useAppraisal = () => {
       },
     },
     {
-      min: 0,
+      min: 20,
       appraisal: {
         icon: <FaX className="text-xs" />,
         grade: "Poor",

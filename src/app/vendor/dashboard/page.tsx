@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <section className="space-y-8 mb-4">
+      <section className="space-y-8 mb-4 text-neutral-dark">
         <VendorStats />
         <ProdMetrics />
       </section>

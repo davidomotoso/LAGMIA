@@ -5,7 +5,7 @@ import Link from "next/link";
 import RatingStars from "@/components/RatingStars";
 import useFunctions from "../hooks/useFunctions";
 
-const Products = ({category }: {category: string }) => {
+const Products = ({ category }: { category: string }) => {
   const { handleRating } = useFunctions();
   const filteredProducts = introProducts.filter(
     (product) => product.category === category,
@@ -23,21 +23,21 @@ const Products = ({category }: {category: string }) => {
             className="space-y-1 cursor-pointer text-neutral-dark w-46 h-[22rem] hover:scale-[1.02] hover:shadow-md p-2 rounded-md duration-150 group"
           >
             <Link href={`/products/${product.id}`}>
-            <Image
-              className="rounded-md size-46 object-cover object-top"
-              src={product.image}
-              alt={product.name}
-              placeholder="blur"
-            />
-            <div>
-              <h2 className="text-ellipsis whitespace-nowrap overflow-clip">
-                {product.name}
-              </h2>
-              <p className="font-medium">{product.price}</p>
-            </div>
-            <div className="flex gap-x-1 items-center">
-             <RatingStars rating={handleRating(product.rating)} />
-            </div>
+              <Image
+                className="rounded-md size-46 object-cover object-top"
+                src={product.image}
+                alt={product.name}
+                placeholder="blur"
+              />
+              <div>
+                <h2 className="text-ellipsis whitespace-nowrap overflow-clip">
+                  {product.name}
+                </h2>
+                <p className="font-medium">{product.price}</p>
+              </div>
+              <div className="flex gap-x-1 items-center">
+                <RatingStars rating={handleRating(product.rating)} />
+              </div>
             </Link>
             <CartButtons
               product={{
@@ -49,7 +49,9 @@ const Products = ({category }: {category: string }) => {
                 seller: sellers[product.id].name,
               }}
               icon={false}
-              addClass={"py-2 text-sm relative -bottom-7 hidden group-hover:block"}
+              addClass={
+                "py-2 text-sm relative -bottom-7 hidden group-hover:block"
+              }
               counterClass={"relative -bottom-10"}
             />
           </div>

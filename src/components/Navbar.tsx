@@ -12,7 +12,7 @@ const Navbar = () => {
       <Link href="/">
         <Image
           src={logo}
-          alt="logo for unitrade lagos"
+          alt="logo for Lagmia"
           width={150}
           priority={true}
         />

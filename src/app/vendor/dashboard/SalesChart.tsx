@@ -9,7 +9,7 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler, 
+  Filler,
 } from "chart.js";
 
 import { Line } from "react-chartjs-2";
@@ -22,7 +22,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Filler
+  Filler,
 );
 
 const SalesChart = () => {
@@ -33,9 +33,9 @@ const SalesChart = () => {
         label: "Weekly Sales",
         data: [120, 190, 300, 400, 300, 300, 450],
         borderWidth: 2,
-        borderColor: "#3b82f6", 
-        backgroundColor: "rgba(59, 130, 246, 0.3)", 
-        fill: true, 
+        borderColor: "#3b82f6",
+        backgroundColor: "rgba(59, 130, 246, 0.3)",
+        fill: true,
         tension: 0.4,
         pointRadius: 4,
         pointBackgroundColor: "#3b82f6",
@@ -72,7 +72,7 @@ const SalesChart = () => {
   };
 
   return (
-    <div className="w-full h-64">
+    <div className="w-full h-79">
       <Line data={data} options={options} />
     </div>
   );
