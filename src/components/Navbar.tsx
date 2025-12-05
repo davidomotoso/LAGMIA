@@ -20,7 +20,7 @@ const Navbar = () => {
       <input
         type="search"
         name="search for products"
-        className="w-80 border rounded-sm border-gray-400 py-2 px-4 text-lg"
+        className="w-80 border rounded-sm border-gray-400 py-1.5 px-4 text-lg"
         placeholder="Search for Products"
       />
       <nav>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              className="flex items-center gap-x-2 hover:text-secondary duration-200"
+              className="flex items-center gap-x-2 hover:text-secondary duration-200 relative"
               href="/cart"
             >
               <FaCartShopping />
