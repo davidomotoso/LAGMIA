@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { create } from "zustand";
 import { StaticImageData } from "next/image";
 
@@ -17,6 +17,12 @@ interface Alert {
   color: string;
 }
 
+interface ReportProduct {
+  id: number;
+  reason: string;
+  additionalDetails: string;
+}
+
 interface CartState {
   cart: Product[];
   addToCart: (product: Product) => void;
@@ -25,6 +31,8 @@ interface CartState {
   setAlert: (alert: Alert | object) => void;
   incrementQuantity: (id: number) => void;
   decrementQuantity: (id: number) => void;
+  report: ReportProduct[];
+  addReport: (report: ReportProduct) => void;
 }
 export const useCartStore = create<CartState>((set) => {
   return {
@@ -51,5 +59,8 @@ export const useCartStore = create<CartState>((set) => {
           )
           .filter((item) => item.quantity > 0),
       })),
+    report: [],
+    addReport: (report: ReportProduct) =>
+      set((state) => ({ report: [...state.report, report] })),
   };
 });

@@ -1,40 +1,39 @@
 "use client";
 
-import { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import successAnimation from "@/../public/lottie/success.json";
+import useReport from "@/app/hooks/useReport";
 
 const Report = ({ id }: { id: number }) => {
-  const [showConfirm, setShowConfirm] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const confirmSubmit = () => {
-    setShowConfirm(false);
-
-    // simulate API call
-    setTimeout(() => {
-      setShowSuccess(true);
-    }, 500);
-
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 2000);
-  };
+  const {
+    reason,
+    setReason,
+    additionalDetails,
+    setAdditionalDetails,
+    showConfirm,
+    setShowConfirm,
+    showSuccess,
+    confirmSubmit,
+    storeReports,
+  } = useReport();
   return (
     <>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="reason-select" className="block mb-2 font-medium">
           Reason for Report <span className="text-red-600">*</span>
         </label>
         <select
           id="reason-select"
           className="w-full border border-gray-500 rounded-lg p-3 mb-5"
+          value={reason}
+          onChange={(e) => setReason(e.target.value)}
           required
         >
           <option value="">Select a reason</option>
           <option value="fake">Fake / Counterfeit Product</option>
           <option value="scam">Scam / Fraudulent Listing</option>
           <option value="wrong-info">Misleading Information</option>
-          <option value="violence">Violates Terms</option>
+          <option value="violation">Violates Terms</option>
           <option value="other">Other</option>
         </select>
         <label className="block mb-2 font-medium">
@@ -42,16 +41,22 @@ const Report = ({ id }: { id: number }) => {
         </label>
         <textarea
           className="w-full border border-gray-500 rounded-lg p-3 h-36 mb-6"
+          value={additionalDetails}
+          onChange={(e) => setAdditionalDetails(e.target.value)}
           placeholder="Provide more information to help our team..."
         />
+        <button
+          type="submit"
+          onClick={() => {
+            if (reason !== "") {
+              setShowConfirm(true);
+            }
+          }}
+          className="w-full bg-primary/85 cursor-pointer text-white py-3 rounded-md font-semibold hover:bg-primary duration-150 transition"
+        >
+          Submit Report
+        </button>
       </form>
-      <button
-        type="button"
-        onClick={() => setShowConfirm(true)}
-        className="w-full bg-primary/85 cursor-pointer text-white py-3 rounded-md font-semibold hover:bg-primary duration-150 transition"
-      >
-        Submit Report
-      </button>
       {showConfirm && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
           <div className="bg-white p-6 rounded-xl w-full max-w-sm shadow-lg">
@@ -72,7 +77,9 @@ const Report = ({ id }: { id: number }) => {
               <button
                 type="submit"
                 className="px-4 py-2 bg-primary/90 cursor-pointer text-white rounded-sm hover:bg-primary"
-                onClick={confirmSubmit}
+                onClick={() => {
+                  confirmSubmit(), storeReports(id);
+                }}
               >
                 Yes, Report
               </button>

@@ -60,7 +60,7 @@ const useCartFunctions = () => {
     calTotalPrice,
     calPriceAndDeliveryFee,
     handleDeliveryFee,
-    handleRemoveItem
+    handleRemoveItem,
   };
 };
 
