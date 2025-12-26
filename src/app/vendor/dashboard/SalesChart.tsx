@@ -31,13 +31,13 @@ const SalesChart = () => {
     datasets: [
       {
         label: "Weekly Sales",
-        data: [120, 190, 300, 400, 300, 300, 450],
+        data: [210, 190, 300, 200, 300, 300, 350,400],
         borderWidth: 2,
         borderColor: "#3b82f6",
         backgroundColor: "rgba(59, 130, 246, 0.3)",
         fill: true,
         tension: 0.4,
-        pointRadius: 4,
+        pointRadius: 0,
         pointBackgroundColor: "#3b82f6",
         pointBorderColor: "#fff",
         pointBorderWidth: 1,
@@ -65,14 +65,14 @@ const SalesChart = () => {
       y: {
         beginAtZero: true,
         grid: {
-          display: false,
+          display: true,
         },
       },
     },
   };
 
   return (
-    <div className="w-full h-79">
+    <div className="w-full h-87 py-2">
       <Line data={data} options={options} />
     </div>
   );

@@ -54,7 +54,7 @@ const Hero = () => {
                 placeholder="blur"
               />
               <div className=" p-2">
-                <h2 className="text-ellipsis whitespace-nowrap overflow-clip">
+                <h2 className="truncate">
                   {product.name}
                 </h2>
                 <p className="font-medium">{product.price}</p>

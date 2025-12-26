@@ -32,7 +32,7 @@ const ProdMetrics = () => {
                       className="size-12 rounded-sm object-cover"
                     />
                   </td>
-                  <td className="py-3 px-6">{item.name}</td>
+                  <td className="py-3 px-6 max-w-xs truncate">{item.name}</td>
                   <td className="py-3 px-6">{item.price}</td>
                   <td className={`py-3 px-6 font-medium ${stockInfo.color}`}>
                     {stockInfo.text}
@@ -45,10 +45,7 @@ const ProdMetrics = () => {
       </div>
       <div className="bg-white shadow rounded-xl py-6 px-4">
         <h3 className="text-xl font-semibold mb-4">Analytics</h3>
-
-        <div className="bg-gray-100/70 p-4 shadow rounded-lg">
           <SalesChart />
-        </div>
       </div>
     </div>
   );

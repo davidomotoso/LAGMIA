@@ -6,6 +6,7 @@ import CartButtons from "@/components/CartButtons";
 import CustomerReviews from "./CustomerReviews";
 import RatingStars from "@/components/RatingStars";
 import useFunctions from "@/app/hooks/useFunctions";
+import Link from "next/link";
 
 const Product = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
@@ -60,9 +61,9 @@ const Product = async ({ param }: { param: { id: number } }) => {
               counterClass={""}
             />
           </div>
-          <p className="text-xs text-primary cursor-pointer hover:underline">
+          <Link href={`/report-product/${product.id}`} className="text-xs text-primary cursor-pointer hover:underline">
             Report incorrect product information
-          </p>
+          </Link>
         </div>
       </section>
       <ProductDetails product={product} />
