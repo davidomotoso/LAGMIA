@@ -1,29 +1,26 @@
 import { introProducts, sellers } from "@/components/Exports";
 import Image from "next/image";
-import ProductDetails from "@/components/ProductDetails";
-import Specifications from "@/components/Specifications";
-import CartButtons from "@/components/CartButtons";
-import CustomerReviews from "./CustomerReviews";
-import RatingStars from "@/components/RatingStars";
+// import ProductDetails from "./ProductDetails";
 import useFunctions from "@/app/hooks/useFunctions";
-import Link from "next/link";
+import RatingStars from "@/components/RatingStars";
+import Specifications from "@/components/Specifications";
+import ProductDetails from "@/components/ProductDetails";
 
-const Product = async ({ param }: { param: { id: number } }) => {
+const View = async ({ param }: { param: { id: number } }) => {
   const { id } = await param;
-  const { handleRating, getStockStatus } = useFunctions();
+  const { getStockStatus, handleRating } = useFunctions();
   const product = introProducts[id];
-  const seller = sellers[id];
   const stockInfo = getStockStatus(product.qty, product.qtySold);
 
   return (
     <section className="w-8/11 space-y-4">
       <section className="bg-white p-4 rounded-sm flex items-start justify-between">
         <Image
-          className="rounded-md object-cover w-4/10 h-80"
+          className="rounded-md object-cover size-60"
           src={product.image}
           alt={product.name}
         />
-        <div className="w-4/7 grid place-items-start gap-y-3 text-neutral-dark">
+        <div className="w-9/13 grid place-items-start gap-y-3 text-neutral-dark">
           <div className="w-full space-y-3 pb-3 border-b border-b-gray-200">
             <h2 className="text-3xl font-semibold">{product.name}</h2>
             {product.specifications
@@ -35,10 +32,9 @@ const Product = async ({ param }: { param: { id: number } }) => {
                 </p>
               ))}
           </div>
-          <div className="space-y-2 w-full pb-3 border-b border-b-gray-200">
+          <div className="space-y-2 w-full pb-3">
             <h3 className="text-2xl font-bold">{product.price}</h3>
             <p className={`${stockInfo.color} text-sm`}>{stockInfo.text}</p>
-            <p className="text-sm">+ shipping calculated at checkout</p>
             <div className="flex items-center gap-x-2">
               <div className="flex gap-x-1 items-center">
                 <RatingStars rating={handleRating(product.rating)} />
@@ -47,41 +43,13 @@ const Product = async ({ param }: { param: { id: number } }) => {
                 ({product.rating.length} verified rating)
               </p>
             </div>
-            <CartButtons
-              product={{
-                name: product.name,
-                image: product.image,
-                id: product.id,
-                price: product.price,
-                quantity: 1,
-                seller: seller.name,
-              }}
-              icon={true}
-              addClass={"p-3"}
-              counterClass={""}
-            />
           </div>
-          <Link
-            href={`/report-product/${product.id}`}
-            className="text-xs text-primary cursor-pointer hover:underline"
-          >
-            Report incorrect product information
-          </Link>
         </div>
       </section>
       <ProductDetails product={product} />
       <Specifications product={product} />
-      <CustomerReviews
-        reviewProps={{
-          id: product.id,
-          visibleIcon: false,
-          limit: 3,
-          rating: product.rating,
-          reviews: product.customerReviews,
-        }}
-      />
     </section>
   );
 };
 
-export default Product;
+export default View;
