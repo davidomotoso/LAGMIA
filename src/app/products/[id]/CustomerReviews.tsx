@@ -23,7 +23,7 @@ const CustomerReviews = ({
 }) => {
   const { handleRating, handleFilterRatings } = useFunctions();
   return (
-    <section className="bg-white rounded-sm mt-4 text-neutral-dark space-y-3">
+    <section className="bg-white rounded-sm text-neutral-dark space-y-3">
       <div className="p-3 rounded-t-sm flex items-center justify-between border-b border-gray-200">
         {reviewProps.visibleIcon === false ? (
           <h3 className="text-xl font-semibold">Customer Reviews</h3>

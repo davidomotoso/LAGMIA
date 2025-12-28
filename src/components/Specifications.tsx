@@ -7,7 +7,7 @@ const Specifications = ({
   };
 }) => {
   return (
-    <section className="bg-white rounded-sm my-4 text-neutral-dark">
+    <section className="bg-white rounded-sm text-neutral-dark">
       <h3 className="text-xl font-medium p-3 border-b border-gray-200">
         Specification
       </h3>
