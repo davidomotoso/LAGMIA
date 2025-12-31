@@ -82,7 +82,7 @@ const Catergories = () => {
         </li>
       </ul>
       <Link href={"vendor/auth"}>
-        <Image src={ad} alt="ad" unoptimized />
+        <Image src={ad} alt="ad" className="rounded-sm" />
       </Link>
     </aside>
   );
