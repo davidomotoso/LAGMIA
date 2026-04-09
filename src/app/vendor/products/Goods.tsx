@@ -32,11 +32,11 @@ const Goods = () => {
                 <div className="flex items-center justify-between">
                   <h4 className="text-lg font-medium">{product.price}</h4>
                   <button
-                    className="flex items-center gap-x-2 py-2 px-4 font-medium rounded-sm bg-primary/80 hover:bg-primary cursor-pointer text-white duration-200 transition"
+                    className="text-sm flex items-center gap-x-1.5 py-2 px-4 font-medium rounded-md bg-primary/80 hover:bg-primary cursor-pointer text-white duration-200 transition"
                     type="button"
                   >
                     Edit
-                    <BsPenFill className="text-sm" />
+                    <BsPenFill className="text-xs" />
                   </button>
                 </div>
               </div>

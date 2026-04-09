@@ -43,7 +43,7 @@ const CategoryOptions = ({ category }: { category: string }) => {
                 name="brand"
                 id={`brand-${index}`}
               />
-              <label htmlFor={`brand-${index}`}>{brand}</label>
+              <label className="group-hover:cursor-pointer" htmlFor={`brand-${index}`}>{brand}</label>
             </li>
           ))}
         </ul>
