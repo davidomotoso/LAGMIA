@@ -42,6 +42,7 @@ const useFunctions = () => {
       return { text: `${unit} Units Left`, color: "text-red-500" };
     }
   };
+    
 
   return {
     getDeliveryDate,

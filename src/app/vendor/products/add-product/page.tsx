@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
+import Specifications from "./Specifications";
 
 const page = () => {
   return (
-   <section className="bg-black/30 backdrop-blur-lg w-full absolute top-0 left-0 grid place-items-center py-10">
+    <section className="bg-black/30 backdrop-blur-lg w-full absolute top-0 left-0 grid place-items-center py-10">
       <section className="w-5xl mx-auto bg-white rounded-lg shadow-lg text-neutral-dark">
         <h2 className="text-2xl font-bold p-5 border-b border-gray-200 flex items-center gap-x-3">
           <Link className="hover:pr-1 duration-150" href={"/vendor/products"}>
@@ -60,7 +61,7 @@ const page = () => {
                   required
                 >
                   <option value="">Select category</option>
-                  <option value="Health & Beauty">Health & Beauty</option>
+                  <option value="Health&Beauty">Health & Beauty</option>
                   <option value="Electronics">Electronics</option>
                   <option value="Fashion">Fashion</option>
                   <option value="Home Appliances">Home Appliances</option>
@@ -86,7 +87,8 @@ const page = () => {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  Features (one per line) <span className="text-red-500">*</span>
+                  Features (one per line){" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="features"
@@ -96,21 +98,7 @@ const page = () => {
                   required
                 />
               </div>
-              <div>
-                <label
-                  htmlFor="specifications"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Specifications (one per line) <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="specifications"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                  rows={4}
-                  placeholder="e.g Brand: Cerave"
-                  required
-                />
-              </div>
+            <Specifications/>
               <div>
                 <label htmlFor="qty" className="block text-sm font-medium mb-2">
                   Quantity <span className="text-red-500">*</span>
@@ -156,7 +144,7 @@ const page = () => {
         </form>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default page
+export default page;
