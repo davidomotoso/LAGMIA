@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 import Specifications from "./Specifications";
+import ImageUploader from "./ImageUploader";
 
 const page = () => {
   return (
@@ -98,7 +99,7 @@ const page = () => {
                   required
                 />
               </div>
-            <Specifications/>
+              <Specifications />
               <div>
                 <label htmlFor="qty" className="block text-sm font-medium mb-2">
                   Quantity <span className="text-red-500">*</span>
@@ -113,25 +114,8 @@ const page = () => {
                 />
               </div>
             </section>
-            <section className="w-3/7 space-y-4">
-              <div className="grid place-content-center border-2 border-dashed rounded-sm h-99 font-medium border-secondary">
-                Images will be displayed here
-              </div>
-              <div>
-                <label
-                  htmlFor="product-image"
-                  className="text-center block text-sm font-medium w-full bg-primary/85 hover:bg-primary cursor-pointer duration-200 transition rounded-md p-3 text-white"
-                >
-                  Upload Images
-                </label>
-                <input
-                  id="product-image"
-                  type="file"
-                  accept="image/*"
-                  className="hidden"
-                />
-              </div>
-            </section>
+            <ImageUploader/>
+          {/* <AddImages/> */}
           </main>
           <div className="p-6">
             <button

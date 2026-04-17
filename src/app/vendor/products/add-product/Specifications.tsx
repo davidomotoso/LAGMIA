@@ -1,13 +1,12 @@
-"use client"
+"use client";
 import useSpecifications from "@/app/hooks/useSpecifications";
 import Alert from "@/components/Alert";
 import SpreadOptions from "@/components/SpreadOptions";
-import { useCartStore } from "@/Utils/storeCart";
-
+import { useProductStore } from "@/Utils/storeProducts";
 const Specifications = () => {
   const { handleAddSpec, setSpec, setSpecValue, spec, specValue } =
     useSpecifications();
-    const options=useCartStore((state)=>state.options)
+  const options = useProductStore((state) => state.options);
 
   return (
     <fieldset className="border border-gray-300 p-4 rounded-md">
@@ -50,7 +49,7 @@ const Specifications = () => {
         placeholder="E.g Samsung, Smartphones, Male, Black"
         required
       />
-      <SpreadOptions arrs={options}/>
+      <SpreadOptions arrs={options} />
       <div className="flex justify-end mt-4">
         <button
           type="button"
@@ -60,7 +59,7 @@ const Specifications = () => {
           Add Specification
         </button>
       </div>
-      <Alert/>
+      <Alert />
     </fieldset>
   );
 };
