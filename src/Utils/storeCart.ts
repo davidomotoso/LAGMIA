@@ -23,10 +23,6 @@ interface ReportProduct {
   additionalDetails: string;
 }
 
-interface Options{
-  label: string;
-  value: string | number
-}
 
 interface CartState {
   cart: Product[];
@@ -38,7 +34,6 @@ interface CartState {
   decrementQuantity: (id: number) => void;
   report: ReportProduct[];
   addReport: (report: ReportProduct) => void;
-  options: Options[];
 }
 export const useCartStore = create<CartState>((set) => {
   return {
@@ -68,6 +63,5 @@ export const useCartStore = create<CartState>((set) => {
     report: [],
     addReport: (report: ReportProduct) =>
       set((state) => ({ report: [...state.report, report] })),
-    options: [],
   };
 });
