@@ -1,12 +1,12 @@
-import useSpecifications from "@/app/hooks/useSpecifications";
+import useAddProduct from "@/app/hooks/useAddProduct";
 import { FaTimes } from "react-icons/fa";
 
-interface Options {
+interface Specifications {
   label: string;
   value: string | number;
 }
-const SpreadOptions = ({ arrs }: { arrs: Options[] }) => {
-  const { handleDeleteSpec } = useSpecifications();
+const SpreadOptions = ({ arrs }: { arrs: Specifications[] }) => {
+  const { handleDeleteSpec } = useAddProduct();
   return (
     <>
       {arrs.length > 0 && (

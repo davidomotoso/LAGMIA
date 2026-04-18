@@ -1,4 +1,3 @@
-"use client";
 
 import useAddProduct from "@/app/hooks/useAddProduct";
 import { useProductStore } from "@/Utils/storeProducts";
@@ -7,13 +6,14 @@ import { FaPlus, FaTimes } from "react-icons/fa";
 const ImageUploader = () => {
   const { productImg, mainImage, setMainImage } = useProductStore();
   const { handleAddImage, handleDeleteImage } = useAddProduct();
+
   return (
     <section className="w-3/7 space-y-4">
       <div className="flex flex-col items-center justify-center border-2 border-dashed rounded-md h-99 font-medium border-primary">
         {mainImage ? (
           <img
             src={mainImage}
-            className="h-9/10 w-9/10 object-cover rounded-lg"
+            className="h-9/10 w-9/10 object-cover rounded-lg shadow-xl"
             alt=""
           />
         ) : (
@@ -34,7 +34,6 @@ const ImageUploader = () => {
               multiple
               onChange={handleAddImage}
               className="hidden"
-              required
             />
           </label>
         )}

@@ -1,25 +1,23 @@
-"use client";
-import useSpecifications from "@/app/hooks/useSpecifications";
+import useAddProduct from "@/app/hooks/useAddProduct";
 import Alert from "@/components/Alert";
 import SpreadOptions from "@/components/SpreadOptions";
 import { useProductStore } from "@/Utils/storeProducts";
 const Specifications = () => {
   const { handleAddSpec, setSpec, setSpecValue, spec, specValue } =
-    useSpecifications();
-  const options = useProductStore((state) => state.options);
+    useAddProduct();
+  const specifications = useProductStore((state) => state.specifications);
 
   return (
     <fieldset className="border border-gray-300 p-4 rounded-md">
-      <legend className="block text-sm font-medium mb-2">Specifications</legend>
+      <legend className="block text-sm font-medium mb-2">Specifications <span className="text-red-500">*</span></legend>
       <label htmlFor="specification" className="block text-sm font-medium mb-2">
-        Select specification <span className="text-red-500">*</span>
+        Select specification
       </label>
       <select
         id="specification"
         value={spec}
         onChange={(e) => setSpec(e.target.value)}
         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-        required
       >
         <option value="">Specification</option>
         <option value="Brand">Brand</option>
@@ -38,7 +36,7 @@ const Specifications = () => {
         htmlFor="specificationValue"
         className="block text-sm font-medium mb-2 mt-6"
       >
-        Value <span className="text-red-500">*</span>
+        Value
       </label>
       <input
         type="text"
@@ -47,14 +45,14 @@ const Specifications = () => {
         onChange={(e) => setSpecValue(e.target.value)}
         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
         placeholder="E.g Samsung, Smartphones, Male, Black"
-        required
       />
-      <SpreadOptions arrs={options} />
+      <SpreadOptions arrs={specifications} />
       <div className="flex justify-end mt-4">
         <button
           type="button"
           onClick={handleAddSpec}
-          className="bg-primary/80 font-medium text-sm text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary duration-200"
+          disabled={!spec || !specValue}
+          className="bg-primary/80 font-medium text-sm text-white px-4 py-2 rounded-md cursor-pointer hover:bg-primary disabled:opacity-50 disabled:cursor-not-allowed duration-200"
         >
           Add Specification
         </button>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
-import Specifications from "./Specifications";
-import ImageUploader from "./ImageUploader";
+import ProductForm from "./ProductForm";
 
 const page = () => {
   return (
@@ -13,119 +12,7 @@ const page = () => {
           </Link>
           Add New Product
         </h2>
-        <form>
-          <main className="flex items-start justify-between p-5">
-            <section className="space-y-6 w-6/11">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="product-name"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Product Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="product-name"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                    placeholder="Enter product name"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="price"
-                    className="block text-sm font-medium mb-2"
-                  >
-                    Price <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="price"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                    placeholder="e.g. ₦8,500"
-                    required
-                  />
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="category"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Category <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="category"
-                  name="category"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                  required
-                >
-                  <option value="">Select category</option>
-                  <option value="Health&Beauty">Health & Beauty</option>
-                  <option value="Electronics">Electronics</option>
-                  <option value="Fashion">Fashion</option>
-                  <option value="Home Appliances">Home Appliances</option>
-                  <option value="Computing">Computing</option>
-                  <option value="Phones & Tablets">Phones & Tablets</option>
-                  <option value="Books">Books</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  htmlFor="description"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Description <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="description"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                  rows={4}
-                  placeholder="Enter description"
-                  required
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Features (one per line){" "}
-                  <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="features"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                  rows={4}
-                  placeholder="e.g 5000mAh battery with fast charging"
-                  required
-                />
-              </div>
-              <Specifications />
-              <div>
-                <label htmlFor="qty" className="block text-sm font-medium mb-2">
-                  Quantity <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="number"
-                  id="qty"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-primary"
-                  min="0"
-                  placeholder="e.g 20"
-                  required
-                />
-              </div>
-            </section>
-            <ImageUploader/>
-          {/* <AddImages/> */}
-          </main>
-          <div className="p-6">
-            <button
-              type="submit"
-              className="w-full bg-primary/85 py-3 px-4 rounded-md text-white font-medium hover:bg-primary cursor-pointer duration-200 transition"
-            >
-              Add Product
-            </button>
-          </div>
-        </form>
+        <ProductForm/>
       </section>
     </section>
   );
